@@ -1,0 +1,48 @@
+html,body{width: 100%;height: 100%; margin: 0;padding: 0;overflow-x: hidden;}
+.header{width: 100%;height: 7vh;background: darkmagenta;position: fixed;z-index: 10;padding: 0 10px;}
+.header span.icon-xiangzuojiantou{color: white;font-size: 22px;float: left; padding-top:1.5vh ;}
+.header span.icon-liebiao{color: white;font-size: 22px;float: right; padding-top:1.5vh ;margin-right: 5vw;}
+.header .btn{float: left;width: 40vw;height: 7vh;text-align: center;line-height: 7vh;margin-left: 25vw;}
+.header .btn a{float: left;width: 15vw;height: 7vh;color: white;text-decoration: none;font-size: 16px;margin-right: 1vw;}
+.header .btn .atver{background: white;color: black;}
+.header nav{position: relative;float:right;}
+.header nav .list_box{position: absolute; width: 20vw;z-index: 10;top: 7vh;right: 5vw;background: #000000;opacity: 0.6;border-radius:5px;display: none;}
+.header nav .list_box::before{
+    content: "";
+    height: 0;
+    width: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    border:10px solid transparent;
+    border-bottom: 10px solid #000000;
+}
+.header nav .nav_list li{padding: 5px;margin-bottom: 5px;border-bottom: 1px solid gray;text-align: center;}
+.header nav .nav_list li:last-child{border: none;}
+.header nav .nav_list li a{text-decoration: none;color: darkgray;font-weight: 600;font-size: 14px;}
+section{margin-top: 8vh;position: relative;width: 200vw;overflow: hidden;padding: 0;transition: all 0.5s;}
+.xiangqing{width: 100vw;float: left;}
+.swiper-wrapper .swiper-slide{text-align: center;}
+.goods_information{padding: 2vw;}
+.goods_information .goods_name{color: #333333;font-size: 16px;}
+.goods_information .price{font-size: 16px;color: red;}
+ul,li{margin: 0;padding: 0;list-style: none;}
+.goods_information .information_list li{padding: 1vh 0;line-height: 3vh;font-size: 16px;}
+.goods_information .information_list li span{color: gray;font-size: 14px;}
+.goods_information img{display: block; width: 100vw;margin-left: -2vw;}
+
+.goods_remark{float: left; margin: 0;padding: 0;background: rgb(220,220,220);width: 100vw;}
+.goods_remark .remark_list{width: 100vw;}
+.goods_remark .remark_list li{background: white;margin-top: 1vh;width: 100vw;}
+.goods_remark .remark_list li .remark_header{ padding: 5vw 4vw;border-bottom: 2px solid rgb(220,220,220);}
+.goods_remark .remark_list li .remark_header .date{float: right;color: darkgray;}
+.goods_remark .remark_list li .remark_header .touxiang img{float:left;width: 9vw;height: 9vw;border-radius: 50%;margin-right: 10px;}
+.goods_remark .remark_list li .remark_content{padding: 5vw;font-size: 16px;line-height: 30px;}
+.goods_remark .remark_list li .remark_content .date{margin-top: 10px;color: darkgray;}
+
+.footer{width: 100%;height: 50px;position: fixed;bottom: 0;background: darkmagenta;}
+.footer a{text-decoration: none;float: left;height: 50px; line-height:50px;text-align: center;font-size: 18px;}
+.footer a.iconfont{width: 30vw;background: white;color: #333333;}
+.footer a.s_cart{width: 35vw;background: orangered;color: white;}
+.footer a.buy{width:35vw;background: darkmagenta;color: white;}
