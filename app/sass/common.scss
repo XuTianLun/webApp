@@ -1,0 +1,24 @@
+
+//头部
+.header{
+    width: 100vw; height: 7vh;text-align: center;line-height: 7vh;color: #fff; background: #8e488e;position: fixed;top: 0;left: 0;z-index: 50;
+    .search{
+      margin-left:80vw ;margin-top: -7vh;
+    }
+}
+
+//底部
+.footer{
+    width: 100vw; height: 8vh; background: #fff; position: fixed;bottom: 0;
+    .list{
+        display: flex; flex-flow: row nowrap;
+        li{
+            float: left; width: 20vw;text-align: center;font-size: 12px;line-height: 3vh;margin-top: 1vh;flex: 1;
+            a{color: #777;text-decoration: none;}
+            #highlight{
+                color:#8e488e ;
+            }
+        }
+    }
+         
+}
