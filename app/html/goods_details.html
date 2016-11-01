@@ -11,6 +11,7 @@
 		<script type="text/javascript" src="../js/zepto/dist/zepto.min.js"></script>
 		<script src="../js/zepto/src/touch.js"></script>
 		<script src="../js/swiper/dist/js/swiper.jquery.min.js"></script>
+		<script type="text/javascript" src="../js/basecookie.js"></script>
 		<script type="text/javascript" src="../js/goods_details.js"></script>
 	</head>
 
@@ -41,7 +42,7 @@
 
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide"><img src="../img/56.jpg" /></div>
+						<div id="goods_img" class="swiper-slide"><img src="../img/56.jpg" /></div>
 						<div class="swiper-slide"><img src="../img/57.jpg" /></div>
 						<div class="swiper-slide"><img src="../img/58.jpg" /></div>
 					</div>
@@ -49,8 +50,8 @@
 					<div class="swiper-pagination"></div>
 				</div>
 				<div class="goods_information">
-					<p class="goods_name">斯文印花黑灰色短袖连衣裙</p>
-					<p class="price">￥120</p>
+					<p id="goods_name" class="goods_name">斯文印花黑灰色短袖连衣裙</p>
+					<p id="price" class="price">￥120</p>
 					<div class="information_list">
 						<li>品牌名称：<span>LETDISTO</span></li>
 						<li>商品名称：<span>女款黑白条纹上衣阔腿裤套装</span></li>
@@ -119,7 +120,7 @@
 			</div>
 		</section>
 		<footer class="footer">
-        <a href="#" class="iconfont icon-gouwuche1" ><span id="goods_num" >12</span></a>
+        <a href="#" class="iconfont icon-gouwuche1" ><span id="goods_num" ></span></a>
         <a href="#" class="s_cart" id="s_cart" >加入购物车</a>
         <a href="#" class="buy" id="buy">立即购买</a>
 		</footer>
