@@ -1,9 +1,0 @@
-.box, .box1 { color: #699df7; background: #00BFFF; width: 200px; height: 100px; }
-
-.box ul, .box1 ul { list-style: none; margin: 0; padding: 0; }
-
-.box ul li, .box1 ul li { height: 30px; background: #00FF00; }
-
-.box1 { background: orange; }
-
-.box2 { background: orchid; width: 200px; height: 100px; opacity: 0.8; filter: alpha(opacity=80); }

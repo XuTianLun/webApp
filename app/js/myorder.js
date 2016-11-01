@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded',function(){
-	
-})
-document.addEventListener('DOMContentLoaded',function(){
 	var ecaidan = document.querySelector(".caidan");
 	
 	var edetails = document.querySelector('.details');
@@ -14,11 +11,11 @@ document.addEventListener('DOMContentLoaded',function(){
 		if(xhr.status == 200 && xhr.readyState == 4){
 			var res = JSON.parse(xhr.responseText);
 			
-//			res.forEach(function(item,idx){
-//				var ediv = document.createElement('div');
-//				ediv.innerHTML = '<span>'+item.type+'</span>'+'<span>'+item.balance+'</span>'+'<span>'+item.note+'</span>'+'<span>'+item.time+'</span>';
-//				edetails.appendChild(ediv);
-//			})
+			res.forEach(function(item,idx){
+				var ediv = document.createElement('div');
+				ediv.innerHTML = '<span>'+item.type+'</span>'+'<span>'+item.balance+'</span>'+'<span>'+item.note+'</span>'+'<span>'+item.time+'</span>';
+				edetails.appendChild(ediv);
+			})
 		}
 	}
 })
