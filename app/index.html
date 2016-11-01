@@ -2,186 +2,64 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
-		<style>
-			canvas{
-				border: 1px solid #333333;
-			}
-		</style>
-		<script>
-		/*
-			canvas时钟
-				1)画表盘
-				2)刻度
-				3)时针/分针/秒针
-				4)其他信息
-				5)时钟走动效果
-		 */
-			document.addEventListener('DOMContentLoaded',function(){
-				var canvas = document.querySelector('canvas');
-				
-				canvas.width = 600;
-				canvas.height = 600;
-				
-				var ctx = canvas.getContext('2d');
-				var center ={x:canvas.width/2,y:canvas.height/2};
-				
-				draw();
-				function draw(){
-				ctx.save();
-				ctx.clearRect(0,0,canvas.width,canvas.height);
-				// 先把原点移动到中点位置
-				ctx.translate(center.x,center.y);
-				
-				//1)画外表盘
-				ctx.save();
-				ctx.beginPath();
-				ctx.arc(0,0,120,0,2*Math.PI,false);
-				ctx.lineWidth = 3;
-				ctx.stroke();
-				ctx.restore();
-				//画内表盘
-				
-				ctx.save();
-				ctx.beginPath();
-				var grd=ctx.createLinearGradient(0,114,0,-114);
-				ctx.arc(0,0,114,0,2*Math.PI,false);
-				grd.addColorStop(0,"#ddd");
-				//添加一个渐变颜色
-				grd.addColorStop(1,"white");
-				//把渐变设置到 填充的样式
-				ctx.fillStyle =grd;
-				ctx.stroke();
-				ctx.fill();
-				ctx.restore();
-				
-				ctx.save();
-				ctx.beginPath();
-				ctx.arc(0,0,6,0,2*Math.PI,false);
-				ctx.stroke();
-				ctx.fill();
-				ctx.restore();
-
-				ctx.save();
-							
-				for(var i = 0;i < 60;i++){
-					var start ={x:0,y:-112}
-					var linewidth;//刻度宽度
-					var lineheight;//刻度长度
-					if(i % 15==0){
-						linewidth = 5;
-						lineheight = 8;
-					}else if(i%5 == 0){
-						linewidth = 3;
-						lineheight = 6;
-					}else{
-						linewidth = 1;
-						lineheight = 4;
-					}
-					ctx.beginPath();
-					ctx.moveTo(start.x,start.y);
-					ctx.lineTo(0,start.y+lineheight);
-					ctx.lineWidth = linewidth;
-					ctx.rotate(6*Math.PI/180);
-					ctx.stroke();
-				}
-				
-				ctx.restore();
-//				
-				var d = new Date();
-				var hours = d.getHours();
-				var min = d.getMinutes();
-				var sec = d.getSeconds();
-				var mon = d.getMonth();
-				var day = d.getDay();
-				var tody = d.getDate();
-
-				switch(day){
-					case 1:
-					day = '星期一';
-					break;
-					case 2:
-					day = '星期二';
-					break;
-					case 3:
-					day = '星期三';
-					break;
-					case 4:
-					day = '星期四';
-					break;
-					case 5:
-					day = '星期五';
-					break;
-					case 6:
-					day = '星期六';
-					break;
-					case 0:
-					day = '星期天';
-					break;
-				}
-
-				ctx.save();
-				ctx.beginPath();
-				ctx.rotate((hours+min/60+sec/3600)*360/12*Math.PI/180);
-				ctx.moveTo(0,0);
-				ctx.lineTo(0,-60);
-				ctx.lineWidth = 6;
-				ctx.stroke();
-				ctx.restore();
-				
-				ctx.save();
-				ctx.beginPath();
-				ctx.rotate((min+sec/60)*360/60*Math.PI/180);
-				ctx.moveTo(0,0);
-				ctx.lineTo(0,-80);
-				ctx.lineWidth = 3;
-				ctx.stroke();
-				ctx.restore();
-				
-				ctx.save();
-				ctx.beginPath();
-				ctx.rotate(sec*360/60*Math.PI/180);
-				ctx.moveTo(0,0);
-				ctx.lineTo(0,-90);
-				ctx.lineWidth = 1;
-				ctx.strokeStyle = "red";
-				ctx.stroke();
-				ctx.restore();
-				
-				ctx.save();
-				ctx.beginPath();
-				ctx.font = '16px 微软雅黑';
-				ctx.textBaseline = 'top';
-				min = min >= 10 ? min : '0'+min;
-				sec = sec >=10 ? sec : '0'+sec;
-				ctx.strokeText(hours+':'+min+':'+sec,-35,20);
-				ctx.strokeText( mon+'.'+tody,-20,40);
-				ctx.strokeText( day,-30,60);
-				ctx.restore();
-				
-				ctx.restore();
-				
-				}
-				 setInterval(function(){
-				 	draw();
-				 },1000);
-				
-			})
-		</script>
+		<meta name="viewport" content="width=device-width,initial-scale=1" >
+		<title>OYA商城首页</title>
+		<script src="js/jquery-1.12.0.js"></script>
+		<script src="js/jquery.lazyload.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/common.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/appelsiini.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.min.css"/>
+		
 	</head>
 	<body>
-		<canvas></canvas>
+		<div class="box">
+			<div class="header">
+				OYA商城
+				<!--搜索-->
+				<div class="search"><i class="iconfont" >&#xf004c;</i> </div>
+			</div>
+			<div class="banner">
+				<!--轮播图-->
+				<div class="carousel">
+					<div class="swiper-container">
+					    <div class="swiper-wrapper">
+					        <div class="swiper-slide"><a href="#"><img src="img/1.jpg" /></a></div>
+					        <div class="swiper-slide"><a href="#"><img src="img/2.jpg" /></a></div>
+					        <div class="swiper-slide"><a href="#"><img src="img/3.jpg" /></a></div>
+					        <div class="swiper-slide"><a href="#"><img src="img/4.jpg" /></a></div>
+					        <div class="swiper-slide"><a href="#"><img src="img/5.jpg" /></a></div>
+					        <div class="swiper-slide"><a href="#"><img src="img/6.jpg" /></a></div>
+					    </div>
+					    <!-- 轮播图分页器 -->
+					    <div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<div class="jingxuan"><img src="img/41.jpg" /></div>
+				<div class="nvzhuang"><a href="#"><img src="img/31.jpg" /></a></div>
+				<div class="datalist1"></div>
+				<div class="datalist2"></div>
+				<div class="meizhuang"><img src="img/38.jpg" /></div>
+				<div class="datalist3"></div>
+			</div>
+			<!--底部-->
+			<div class="footer">
+				<ul class="list">
+					<li><a href="#"><i class="iconfont" id="homeicon1">&#xe61f;</i><div class="text">首页</div></a></li>
+					<li><a href="#"><i class="iconfont" id="homeicon2">&#xe654;</i><div class="text">积分</div></a></li>
+					<li><a href="#"><i class="iconfont" id="homeicon3">&#xe6d0;</i><div class="text">分类</div></a></li>
+					<li><a href="#"><i class="iconfont" id="homeicon4">&#xe629;</i><div class="text">购物车</div></a></li>
+					<li><a href="#"><i class="iconfont" id="homeicon5">&#xe65a;</i><div class="text">个人中心</div></a></li>
+				</ul>
+			</div>
+			
+			<!--回到顶部-->
+			<div class="comeback"><i class="iconfont" id="iconback">&#xe61c;</i></div>
+			
+		</div>
 	</body>
 </html>
-<!DOCTYPE html>
-<html>
-	<head>
-		<h1>时钟</h1>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
-</html>
-
-
