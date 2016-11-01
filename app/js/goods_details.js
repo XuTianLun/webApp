@@ -32,7 +32,11 @@
      		$nav_list.hide();
        		console.log(123);
        })           	
-    
+
+		//点击加入购物车
+		var $shoppingcart_btn = $('#s_cart');
+		
+
 
 
 });	

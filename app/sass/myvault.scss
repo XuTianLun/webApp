@@ -42,12 +42,17 @@ header{
                 margin: 0;
                 padding: 0;
                 li{
-                    font-size: 12px;
-                    text-align: center;
-                    width: 120px;
-                    padding: 10px 0;
-                    font-weight: normal;
                     opacity: 0.9;
+                    a{
+                        display: block;
+                        font-weight: normal;
+                        text-decoration: none;
+                        font-size: 12px;
+                        text-align: center;
+                        width: 120px;
+                        padding: 10px 0;
+                        color: #fff;
+                    }
                 }
                 &:before{
                     content: '';

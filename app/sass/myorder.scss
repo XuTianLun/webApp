@@ -1,3 +1,4 @@
+$bgcolor:#8e488e;
 body{
     margin: 0;
     padding: 0;
@@ -15,7 +16,8 @@ header{
      align-items: center;
      a{
          flex: 1;
-         text-align: center;
+         text-align:left;
+         margin-left: 10px;
         
      }
      span:nth-child(2){
@@ -39,13 +41,18 @@ header{
                  background: #666;
                 margin: 0;
                 padding: 0;
-                li{
-                    font-size: 12px;
-                    text-align: center;
-                    width: 120px;
-                    padding: 10px 0;
-                    font-weight: normal;
+                 li{
                     opacity: 0.9;
+                    a{
+                        display: block;
+                        font-weight: normal;
+                        text-decoration: none;
+                        font-size: 12px;
+                        text-align: center;
+                        width: 120px;
+                        padding: 10px 0;
+                        color: #fff;
+                    }
                 }
                 &:before{
                     content: '';
@@ -63,3 +70,36 @@ header{
         }
      }
 }
+/*脚部*/
+.type{
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+    span{
+        flex: 1;
+        text-align: center;
+        color: #333;
+        border-right: 1px solid #333;
+    }
+    span:last-child{
+        border-right: none;
+    }
+}
+footer{         
+    position: fixed;left: 0;bottom:0;right: 0;
+    background: #fff;
+    border-top:1px solid #ddd;
+    padding: 10px 0;
+    nav{display: flex;justify-content: center;
+         a{color: #666;flex: 1;text-align: center;text-decoration: none;
+            display: flex;flex-direction: column;
+            span:first-child{
+                font-size: 20px;
+            }
+            span:nth-child(2){
+                margin: 5px;
+                font-size: 12px;
+            }
+         }   
+      }
+    }
