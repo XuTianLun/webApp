@@ -1,0 +1,79 @@
+
+/*列表页样式*/
+body,html,ul{
+    list-style: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+section{  /*头部大框架*/
+    width: 100%;
+    height: 2000px; 
+    header{
+        width: 100%;
+        height: 48px;
+        background:#8e488e;
+        color: #fff;
+        line-height: 48px;
+        overflow: hidden;    
+        h1{           
+            display: inline-block;
+            width: 70%;
+            height: 48px;
+            line-height: 48px;
+            font-size: 17px;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;            
+        }
+        span.icon-fanhui{ //返回按钮
+            width: 10%;
+            height: 48px;
+            display: inline-block;
+            float: left;
+            margin-left: 15px;            
+        } 
+        span.icon-liebiao{ //列表按钮
+            width: auto;
+            height: 48px;
+            display: inline-block;
+            float: right;
+            padding-right: 15px;            
+        }    
+              
+    }
+    footer{ /*底部列表*/
+        position: fixed;
+        bottom: 0;
+        padding-top: 10px;
+        width: 100%;
+        height: 53px;
+        border-top: 1px solid #cccccc;   
+        ul{
+            display: flex;
+            flex: 1;
+            margin: 0;
+            padding: 0;
+            color: #777777; 
+            li:nth-child(3){ //第三个子元素,高亮
+                color: #8e488e;
+            }
+            li{  /*底部列表每一个子元素*/
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                font-size: 12px;
+                text-align: center;
+                span.iconfont{ /*列表子元素字体图标*/
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 22px;
+                    text-align: center;
+                }
+            }           
+        }     
+    }
+}
