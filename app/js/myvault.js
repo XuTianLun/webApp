@@ -1,11 +1,19 @@
-document.addEventListener('DOMContentLoaded',function(){
+;(function(){
+	document.addEventListener('DOMContentLoaded',function(){
 	var ecaidan = document.querySelector(".caidan");
-	
 	var edetails = document.querySelector('.details');
+	var $liebiao = $('.icon-liebiao');
+	$liebiao.click(function(){
+		if($(this).find('.caidan').css("opacity") == 0){
+		$(this).find('.caidan').css({"opacity":0.9});
+		}else{
+		$(this).find('.caidan').css({"opacity":0});	
+		}
+	})
 	var i = 1;
 	$.ajax({
 		type:"get",
-		url:"/json/myvault.json",
+		url:"../json/myvault.json",
 		dataType:'json',
 		async:true,
 		success: function(res){
@@ -39,7 +47,7 @@ document.addEventListener('DOMContentLoaded',function(){
 					console.log(i);
 					$.ajax({
 						type:"get",
-						url:"/json/myvault.json",
+						url:"../json/myvault.json",
 						dataType:'json',
 						async:true,
 						success: function(res){
@@ -74,3 +82,4 @@ document.addEventListener('DOMContentLoaded',function(){
 				}
 	});
 })
+})();

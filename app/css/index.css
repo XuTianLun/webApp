@@ -1,204 +1,72 @@
 @charset "UTF-8";
-body, html, * {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
+body, html, * { border: none; margin: 0; padding: 0; }
 
-body {
-  font-family: "微软雅黑";
-  font-size: 14px;
-}
+body { font-family: "微软雅黑"; font-size: 14px; }
 
-ul {
-  list-style: none;
-}
+ul { list-style: none; }
 
-.box {
-  width: 100vw;
-}
+.box { width: 100vw; }
 
-.box .header {
-  width: 100vw;
-  height: 7vh;
-  text-align: center;
-  line-height: 7vh;
-  color: #fff;
-  background: #8e488e;
-}
+.box .header { width: 100vw; height: 7vh; text-align: center; line-height: 7vh; color: #fff; background: #8e488e; }
 
-.box .header .search {
-  position: fixed;
-  top: 1px;
-  right: 10px;
-}
+.box .header .search { position: fixed; top: 1px; right: 10px; }
 
-.box .banner {
-  width: 100vw;
-  height: auto;
-  background: #f1f5f6;
-}
+.box .banner { width: 100vw; height: auto; background: #f1f5f6; }
 
-.box .banner .carousel {
-  width: 100vw;
-  height: 30vh;
-}
+.box .banner .carousel { width: 100vw; height: 30vh; }
 
-.box .banner .carousel img {
-  width: 100vw;
-  height: 30vh;
-}
+.box .banner .carousel img { width: 100vw; height: 30vh; }
 
-.box .banner .jingxuan {
-  width: 100vw;
-  height: 10vh;
-}
+.box .banner .jingxuan { width: 100vw; height: 10vh; }
 
-.box .banner .jingxuan img {
-  width: 100vw;
-  height: 10vh;
-}
+.box .banner .jingxuan img { width: 100vw; height: 10vh; }
 
-.box .banner .nvzhuang {
-  width: 100vw;
-  height: 15vh;
-}
+.box .banner .nvzhuang { width: 100vw; height: 15vh; }
 
-.box .banner .nvzhuang img {
-  width: 100vw;
-  height: 15vh;
-}
+.box .banner .nvzhuang img { width: 100vw; height: 15vh; }
 
-.box .banner .datalist1 {
-  width: 100vw;
-  height: auto;
-  margin-top: 2vh;
-}
+.box .banner .datalist1 { width: 100vw; height: auto; margin-top: 2vh; }
 
-.box .banner .datalist1 ul {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-flow: row wrap;
-}
+.box .banner .datalist1 ul { width: 100%; height: 100%; display: flex; flex-flow: row wrap; }
 
-.box .banner .datalist1 ul li {
-  height: 15vh;
-  flex: 1 1 45%;
-  margin: 3px;
-}
+.box .banner .datalist1 ul li { height: 15vh; flex: 1 1 45%; margin: 3px; }
 
-.box .banner .datalist1 ul li img {
-  width: 100%;
-  height: 100%;
-}
+.box .banner .datalist1 ul li img { width: 100%; height: 100%; }
 
-.box .banner .datalist2 {
-  width: 100vw;
-  height: auto;
-}
+.box .banner .datalist2 { width: 100vw; height: auto; }
 
-.box .banner .datalist2 ul {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-flow: row wrap;
-}
+.box .banner .datalist2 ul { width: 100%; height: 100%; display: flex; flex-flow: row wrap; }
 
-.box .banner .datalist2 ul li {
-  height: 20vh;
-  flex: 1 1 100%;
-  margin: 3px;
-}
+.box .banner .datalist2 ul li { height: 20vh; flex: 1 1 100%; margin: 3px; }
 
-.box .banner .datalist2 ul li img {
-  width: 100%;
-  height: 100%;
-}
+.box .banner .datalist2 ul li img { width: 100%; height: 100%; }
 
-.box .banner .meizhuang {
-  width: 100vw;
-  height: 15vh;
-}
+.box .banner .meizhuang { width: 100vw; height: 15vh; }
 
-.box .banner .meizhuang img {
-  width: 100vw;
-  height: 15vh;
-}
+.box .banner .meizhuang img { width: 100vw; height: 15vh; }
 
-.box .banner .datalist3 {
-  width: 100vw;
-  height: auto;
-  margin-bottom: 8vh;
-}
+.box .banner .datalist3 { width: 100vw; height: auto; margin-bottom: 8vh; }
 
-.box .banner .datalist3 ul {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-flow: row wrap;
-}
+.box .banner .datalist3 ul { width: 100%; height: 100%; display: flex; flex-flow: row wrap; }
 
-.box .banner .datalist3 ul li {
-  height: 35vh;
-  flex: 1 1 90%;
-  background: #fff;
-  margin: 5px 10px;
-}
+.box .banner .datalist3 ul li { height: 35vh; flex: 1 1 90%; background: #fff; margin: 5px 10px; }
 
-.box .banner .datalist3 ul li img {
-  width: 100%;
-  height: 80%;
-}
+.box .banner .datalist3 ul li img { width: 100%; height: 80%; }
 
-.box .banner .datalist3 ul li .title {
-  color: #616b7f;
-}
+.box .banner .datalist3 ul li .title { color: #616b7f; }
 
-.box .banner .datalist3 ul li .price {
-  color: red;
-  font-weight: bolder;
-}
+.box .banner .datalist3 ul li .price { color: red; font-weight: bolder; }
 
-.box .footer {
-  width: 100vw;
-  height: 8vh;
-  background: #fff;
-  position: fixed;
-  bottom: 0;
-}
+.box .footer { width: 100vw; height: 8vh; background: #fff; position: fixed; bottom: 0; }
 
-.box .footer .list {
-  display: flex;
-  flex-flow: row nowrap;
-}
+.box .footer .list { display: flex; flex-flow: row nowrap; }
 
-.box .footer .list li {
-  float: left;
-  width: 20vw;
-  text-align: center;
-  font-size: 12px;
-  line-height: 3vh;
-  margin-top: 1vh;
-  flex: 1;
-}
+.box .footer .list li { float: left; width: 20vw; text-align: center; font-size: 12px; line-height: 3vh; margin-top: 1vh; flex: 1; }
 
-.box .footer .list li a {
-  color: #777;
-  text-decoration: none;
-}
+.box .footer .list li a { color: #777; text-decoration: none; }
 
-.box .footer .list li #highlight {
-  color: #8e488e;
-}
+.box .footer .list li #highlight { color: #8e488e; }
 
-.box .comeback {
-  position: fixed;
-  bottom: 8vh;
-  right: 20px;
-  color: #ef4da6;
-}
+.box .comeback { position: fixed; bottom: 8vh; right: 20px; color: #ef4da6; }
 
-.box .comeback #iconback {
-  font-size: 40px;
-}
+.box .comeback #iconback { font-size: 40px; }
