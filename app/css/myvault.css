@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body { margin: 0; padding: 0; height: 130vh; }
+body { margin: 0; padding: 0; height: 120vh; }
 
 /*头部*/
 header { display: flex; position: fixed; z-index: 10; top: 0; left: 0; width: 100%; background: #8e488e; padding: 15px 0; color: #fff; font-size: 16px; font-weight: 600; justify-content: center; align-items: center; }

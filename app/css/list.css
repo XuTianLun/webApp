@@ -2,22 +2,51 @@
 /*列表页样式*/
 body, html, ul { list-style: none; width: 100%; height: auto; margin: 0; padding: 0; }
 
-section { /*头部大框架*/ width: 100%; height: 2000px; }
+section { /*头部大框架*/ width: 100%; height: 1000px; }
 
-section header { width: 100%; height: 48px; background: #8e488e; color: #fff; line-height: 48px; overflow: hidden; }
+section header { width: 100%; height: 48px; background: #8e488e; color: #fff; line-height: 48px; position: fixed; overflow: hidden; }
 
 section header h1 { display: inline-block; width: 70%; height: 48px; line-height: 48px; font-size: 17px; color: #fff; text-align: center; margin: 0; padding: 0; }
 
-section header span.icon-fanhui { width: 10%; height: 48px; display: inline-block; float: left; margin-left: 15px; }
+section header span.icon-fanhui { /*返回按钮*/ width: 10%; height: 48px; display: inline-block; float: left; margin-left: 15px; cursor: pointer; }
 
-section header span.icon-liebiao { width: auto; height: 48px; display: inline-block; float: right; padding-right: 15px; }
+section header span.icon-liebiao { /*列表按钮*/ width: auto; height: auto; float: right; display: inline-block; margin-right: 20px; cursor: pointer; }
 
-section footer { /*底部列表*/ position: fixed; bottom: 0; padding-top: 10px; width: 100%; height: 53px; border-top: 1px solid #cccccc; }
+section article { /*主题内容*/ padding-top: 43px; width: 100%; height: 1000px; background: #f1f5f6; display: flex; }
+
+section article span.headerlist { /*右侧固定菜单栏*/ position: absolute; display: block; top: 47px; right: 10px; opacity: 0; background: #666; border-radius: 5px; margin: 0; padding: 0; }
+
+section article span.headerlist a { display: block; font-weight: normal; text-decoration: none; font-size: 12px; text-align: center; width: 120px; padding: 10px 0; color: #fff; opacity: 0.9; cursor: pointer; }
+
+section article span.headerlist:before { content: ''; display: inline-block; position: absolute; right: 10px; top: -16px; width: 0; height: 0; border: 10px solid transparent; border-bottom: 8px solid #666; }
+
+section article nav { /*左边的导航列表*/ width: 100px; height: auto; background: #fff; }
+
+section article nav ul { width: 100px; height: 100%; }
+
+section article nav ul li { width: 100px; height: 42px; border-top: 1px solid #f1f5f6; font-size: 14px; text-align: center; line-height: 42px; }
+
+section article article { /*ajax请求数据*/ width: 100%; height: 800px; margin-left: 10px; display: flex; background: #fff; padding-top: 10px; flex-direction: column; }
+
+section article article h1 { /*热门推荐标题*/ width: 100%; height: 38px; line-height: 40px; background: #f1f5f6; margin: 0; padding-top: 0; }
+
+section article article ul { padding-top: 5px; width: 100%; height: auto; display: flex; flex-wrap: wrap; justify-content: flex-start; }
+
+section footer { /*底部列表*/ position: fixed; bottom: 0; padding-top: 10px; width: 100%; height: 53px; border-top: 1px solid #cccccc; background: #fff; }
 
 section footer ul { display: flex; flex: 1; margin: 0; padding: 0; color: #777777; }
 
 section footer ul li:nth-child(3) { color: #8e488e; }
 
-section footer ul li { /*底部列表每一个子元素*/ display: flex; flex: 1; flex-direction: column; font-size: 12px; text-align: center; }
+section footer ul li { /*底部列表每一个子元素*/ display: flex; flex: 1; flex-direction: column; font-size: 12px; text-align: center; cursor: pointer; }
 
 section footer ul li span.iconfont { /*列表子元素字体图标*/ display: block; width: 100%; height: 100%; font-size: 22px; text-align: center; }
+
+/*ajax数据加载的样式*/
+.active { color: #ff0000; background: #f1f5f6; }
+
+.li { width: 290px; height: 120px; background: #fff; display: flex; flex-direction: column; flex: 1; }
+
+.img { width: 90px; height: 90px; }
+
+.p { text-align: center; display: block; width: 80px; height: 20px; line-height: 20px; margin: 0; padding: 0; }

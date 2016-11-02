@@ -6,18 +6,17 @@
 		<meta name="viewport" content="width = device-width,initial-scale=1" />
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../js/swiper/dist/css/swiper.min.css" />
-		<link rel="stylesheet" type="text/css" href="../font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="../css/goods_details.min.css" />
 		<script type="text/javascript" src="../js/zepto/dist/zepto.min.js"></script>
 		<script src="../js/zepto/src/touch.js"></script>
 		<script src="../js/swiper/dist/js/swiper.jquery.min.js"></script>
-		<script type="text/javascript" src="../js/basecookie.js"></script>
 		<script type="text/javascript" src="../js/goods_details.js"></script>
 	</head>
 
 	<body>
 		<header class="header">
-			<a href="javascript:history.go(-1)" class="iconfont icon-xiangzuojiantou"></a>
+			<a href="javascript:history.go(-1)" class="iconfont icon-fanhui"></a>
 			<div class="btn" id="btn" >
 				<a class="atver" href="#">详情</a>
 				<a href="#">评论</a>
@@ -51,7 +50,7 @@
 				</div>
 				<div class="goods_information">
 					<p id="goods_name" class="goods_name">斯文印花黑灰色短袖连衣裙</p>
-					<p id="price" class="price">￥120</p>
+					<p  class="price">￥<span id="price">120</span></p>
 					<div class="information_list">
 						<li>品牌名称：<span>LETDISTO</span></li>
 						<li>商品名称：<span>女款黑白条纹上衣阔腿裤套装</span></li>
@@ -120,7 +119,7 @@
 			</div>
 		</section>
 		<footer class="footer">
-        <a href="#" class="iconfont icon-gouwuche1" ><span id="goods_num" ></span></a>
+        <a href="shoppingcart.html" class="iconfont icon-cart" ><span id="goods_num" ></span></a>
         <a href="#" class="s_cart" id="s_cart" >加入购物车</a>
         <a href="#" class="buy" id="buy">立即购买</a>
 		</footer>

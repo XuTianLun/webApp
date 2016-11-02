@@ -2,29 +2,27 @@ html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow-x: hidde
 
 ul, li { margin: 0; padding: 0; list-style: none; }
 
-.header { width: 100%; height: 7vh; background: darkmagenta; position: fixed; z-index: 10; padding: 0 10px; }
+header { display: flex; position: relative; background: #8e488e; padding: 15px 0; color: #fff; font-size: 16px; font-weight: 600; justify-content: center; align-items: center; }
 
-.header a.icon-xiangzuojiantou { color: white; font-size: 22px; float: left; padding-top: 1.5vh; text-decoration: none; }
+header a { flex: 1; text-align: left; margin-left: 10px; text-decoration: none; }
 
-.header span.icon-liebiao { color: white; font-size: 22px; float: right; padding-top: 1.5vh; margin-right: 5vw; }
+header a.icon-fanhui { color: white; flex: 1; text-align: left; margin-left: 10px; font-size: 22px; }
 
-.header .btn { float: left; width: 30vw; height: 7vh; text-align: center; line-height: 7vh; margin-left: 20vw; }
+header span:nth-child(2) { flex: 4; text-align: center; }
 
-.header .btn a { float: left; width: 40vw; height: 7vh; color: white; text-decoration: none; font-size: 16px; margin-right: 1vw; font-size: 16px; font-weight: 600; }
+header span:last-child { position: relative; flex: 1; margin-right: 10px; text-align: right; }
 
-.header nav { position: relative; float: right; }
+header span:last-child .caidan { position: absolute; top: 30px; right: 0; opacity: 0; }
 
-.header nav .list_box { position: absolute; width: 20vw; z-index: 10; top: 7vh; right: 5vw; background: #000000; opacity: 0.6; border-radius: 5px; display: none; }
+header span:last-child .caidan ul { display: none; list-style: none; border-radius: 5px; background: #666; margin: 0; padding: 0; }
 
-.header nav .list_box::before { content: ""; height: 0; width: 0; opacity: 0.6; position: absolute; top: -20px; right: 10px; border: 10px solid transparent; border-bottom: 10px solid #000000; }
+header span:last-child .caidan ul li { opacity: 0.9; }
 
-.header nav .nav_list li { padding: 5px; margin-bottom: 5px; border-bottom: 1px solid gray; text-align: center; }
+header span:last-child .caidan ul li a { display: block; font-weight: normal; text-decoration: none; font-size: 12px; text-align: center; width: 120px; padding: 10px 0; color: #fff; }
 
-.header nav .nav_list li:last-child { border: none; }
+header span:last-child .caidan ul:before { content: ''; display: inline-block; position: absolute; right: 5px; top: -16px; width: 0; height: 0; border: 10px solid transparent; border-bottom: 8px solid #666; }
 
-.header nav .nav_list li a { text-decoration: none; color: darkgray; font-weight: 600; font-size: 14px; }
-
-section { flex: 1; margin-top: 8vh; }
+section { margin-top: 8vh; }
 
 section .goods_list li { height: 26vw; border-bottom: 2px solid darkgray; width: 100vw; padding: 5px; }
 
@@ -48,12 +46,12 @@ section .goods_list li p .number button { border: 1px solid darkgray; }
 
 section .goods_list li p .iconfont { float: right; border: none; background: white; margin-top: 8px; }
 
-.footer { width: 100%; height: 50px; position: fixed; bottom: 0; background: darkmagenta; font-weight: 600; }
+.footer { width: 100%; height: 40px; position: fixed; bottom: 0; background: #8e488e; font-weight: 600; }
 
-.footer a { text-decoration: none; float: left; height: 50px; line-height: 50px; text-align: center; font-size: 18px; }
+.footer a { text-decoration: none; float: left; height: 40px; line-height: 40px; text-align: center; font-size: 16px; }
 
-.footer label { float: left; width: 30vw; height: 50px; background: white; color: #333333; position: relative; text-align: center; line-height: 50px; }
+.footer label { float: left; width: 30vw; height: 40px; background: white; color: #333333; position: relative; text-align: center; line-height: 40px; }
 
 .footer a.pay_way { width: 35vw; background: orangered; color: white; }
 
-.footer a.buy { width: 35vw; background: darkmagenta; color: white; }
+.footer a.buy { width: 35vw; background: #8e488e; color: white; }
