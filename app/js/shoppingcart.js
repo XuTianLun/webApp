@@ -17,10 +17,8 @@
        })           	
 			//加载商品
 			//尝试获取cookie
-			 var goods_list = []; 
-		try{
-	         goods_list = JSON.parse(getCookie("goods"));
-	        }catch(err){};
+		var goodsData = localStorage.getItem('goodsdata');//这里得到的有可能为null
+		goodsData = goodsData ? JSON.parse(goodsData) : [];
         
         //  创建匿名函数
         (function(){
