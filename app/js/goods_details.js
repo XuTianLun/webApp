@@ -35,13 +35,13 @@
        //删除本地存储
 //		localStorage.clear();
 		//点击加入购物车
+		//获取本地存储，防止被覆盖
 		var goodsData = localStorage.getItem('goodsdata');//这里得到的有可能为null
 		goodsData = goodsData ? JSON.parse(goodsData) : [];
 		$("#goods_num").text(goodsData.length);	
 
 		var $shoppingcart_btn = $('#s_cart');
-		console.log()
-	//判断cookie是否存在，防止被覆盖
+
 	$shoppingcart_btn.on('singleTap',function(){
 			//获取商品名字
 		console.log(123)	

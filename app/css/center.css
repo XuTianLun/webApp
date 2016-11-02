@@ -1,6 +1,9 @@
+@charset "UTF-8";
 * { list-style: none; margin: 0; padding: 0; text-decoration: none; }
 
-body { background: #f1f5f6; font-size: 12px; }
+body { background: #f1f5f6; font-size: 14px; font-family: "微软雅黑"; }
+
+.header { font-size: 16px; }
 
 #pageMine .photo { width: 100vw; height: 15vh; margin-left: -15px; margin-top: 2vh; background: url(../img/nav_bg.jpg) repeat-x; background-size: cover; }
 
@@ -10,21 +13,21 @@ body { background: #f1f5f6; font-size: 12px; }
 
 #pageMine .photo .people_pic { width: 50px; height: 50px; margin-top: 25px; }
 
-#pageMine .photo .people_pic img { width: 50px; height: 50px; border-radius: 115px; }
+#pageMine .photo .people_pic img { width: 50px; height: 50px; border-radius: 115px; margin-left: 15px; }
 
 #pageMine .photo .jiantou .badge { margin-top: 8vh; }
 
 #pageMine .photo .VIP { margin-top: 5vh; }
 
-#pageMine .photo .VIP p, #pageMine .photo .VIP span { font-size: 16px; font-weight: bold; color: #fff; }
+#pageMine .photo .VIP p, #pageMine .photo .VIP span { font-size: 14px; font-weight: bold; color: #fff; }
 
-#pageMine .photo .VIP .small_pic img { width: 20px; height: 20px; }
+#pageMine .photo .VIP .small_pic img { width: 20px; height: 20px; margin-bottom: 5px; }
 
-#pageMine .money { width: 100vw; height: 8vh; line-height: 3vh; text-align: center; background: #fff; margin-left: -15px; }
+#pageMine .money { width: 100vw; height: 8vh; line-height: 2vh; text-align: center; background: #fff; margin-left: -15px; }
 
 #pageMine .money a { color: #000000; }
 
-#pageMine .money a p:nth-child(1) { font-weight: bolder; font-size: 16px; margin-top: 5px; }
+#pageMine .money a p:nth-child(1) { font-weight: bolder; font-size: 14px; margin-top: 5px; }
 
 #pageMine .vipgrade { width: 100vw; margin: 2vh; margin-left: -15px; }
 
