@@ -24,12 +24,9 @@ $(function() {
 	(function() {
 		//获取商品要显示的区域
 		var $goodsList = $("#goods_list")
-			//创建价格合计变量
-		var total_price = 0;
+
 		if(goodsData.length != 0) {
 			for(var i = 0; i < goodsData.length; i++) {
-				//计算总价钱 
-//				total_price = total_price + parseInt(JSON.stringify(goodsData[i].price));
 				//创建复选框并添加属性 
 				var $check = $("<input/>").attr("type", "checkbox");
 				$check.addClass('check');
@@ -49,7 +46,8 @@ $(function() {
 				var $btn_minus = $('<button/>').addClass('minus').text("-");
 				//数量
 				var $input = $("<input/>").attr('src', 'text').val('1');
-				//加
+				$input.addClass('shuliang')
+					//加
 				var $btn_add = $('<button/>').addClass('add').text("+");
 				//删除
 				var $remove = $('<button/>').addClass('remove iconfont icon-lajixiang').text('删除');
@@ -70,7 +68,7 @@ $(function() {
 				//li添加到页面显示区域
 				$li.appendTo($goodsList);
 			}
-			$('#buy').find('span').text(total_price);
+
 		}
 
 	})()
@@ -78,14 +76,18 @@ $(function() {
 	var $goodslist = $('#goods_list');
 	var $btn_minus = $goodslist.find('li').find('.minus');
 	var $btn_add = $goodslist.find('li').find('.add');
-	
+
 	//设置商品数量 点击“加”时商品数量加1
 	$goodslist.on('singleTap', '.add', function() {
 
 			var index = $(this).parent().parent().parent().index();
+
 			var count = $(this).prev('input').val();
 			count++;
 			$(this).prev('input').val(count);
+			//计算价格
+			totalPrice();
+
 		})
 		//		//设置商品数量 点击“减”时商品数量减1	
 	$btn_minus.on('singleTap', function() {
@@ -97,22 +99,64 @@ $(function() {
 			count--;
 		}
 		$(this).next('input').val(count);
+		//计算价格
+		totalPrice();
 	})
 
 	//删除商品
+
 	$goodslist.on('singleTap', '.remove', function() {
-		//获取本地存储
-		goodsData = localStorage.getItem('goodsdata'); 
-		goodsData =  JSON.parse(goodsData);
-		//删除元素
-		var index = $(this).parent().parent().parent().index();
-		$goodslist.find("li").eq(index).remove();
-		//重新设置本地存储
-		var arr = goodsData.splice(index,1);
-		localStorage.setItem('goodsdata',JSON.stringify(arr));
+			//获取本地存储
+			goodsData = localStorage.getItem('goodsdata');
+			goodsData = JSON.parse(goodsData);
 
+			//删除元素
+			var index = $(this).parent().parent().index();
+			console.log(index);
+			$goodslist.find("li").eq(index).remove();
+			//重新设置本地存储
+			goodsData.splice(index, 1);
+			localStorage.setItem('goodsdata', JSON.stringify(goodsData));
+			//重新计算价格
+			totalPrice();
+
+		})
+		//单选
+	$goodslist.on('singleTap', '.check', function() {
+
+		//计算价格
+		totalPrice();
 	})
-	
 
+	$('#allcheck').on('singleTap', function() {
+			//调用全选反选函数
+			SelectAll();
+			totalPrice();
+		})
+		////全选反选函数
+	function SelectAll() {
+		var checkboxs = document.getElementsByClassName('check');
+		for(var i = 0; i < checkboxs.length; i++) {
+			var e = checkboxs[i];
+			e.checked = !e.checked;
+		}
+	}
+	//创建计算价格的函数；
+	function totalPrice() {
+		var check = $goodslist.find('li').find('.check');
+		//计算价格
+		//创建价格合计变量
+		var total_price = 0;
+		for(var i = 0; i < check.length; i++) {
+
+			if(check[i].checked) {
+				var shuliang = $(check[i]).parent('li').find('.shuliang').val();
+				var price = $(check[i]).parent('li').find('.price').html();
+				total_price = total_price + parseInt(price) * shuliang;
+			}
+		}
+		//输出总价格
+		$('#buy').find('span').text(total_price);
+	}
 
 })
