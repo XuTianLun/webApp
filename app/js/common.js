@@ -1,7 +1,7 @@
 
 //底部高亮
 $(function(){
-	$("#homeicon1").css({"color":"#8e488e"});
+//	$("#homeicon1").css({"color":"#8e488e"});
 	$(".footer li").eq(0).click(function(){
 		$("#homeicon1").css({"color":"#8e488e"});
 		$("#homeicon2").css({"color":"#777"});
