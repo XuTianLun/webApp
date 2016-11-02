@@ -3,13 +3,13 @@ body{font-family: "微软雅黑";font-size: 14px;}
 ul{list-style: none;}
 .box{
     width: 100vw;;
-//  //头部
-//  .header{
-//      width: 100vw; height: 7vh;text-align: center;line-height: 7vh;color: #fff; background: #8e488e;position: fixed;top: 0;left: 0;z-index: 50;
-//      .search{
-//        margin-left:80vw ;margin-top: -7vh;
-//      }
-//  }
+    //头部
+    .header{
+        width: 100vw; height: 7vh;text-align: center;line-height: 7vh;color: #fff; background: #8e488e;position: fixed;top: 0;left: 0;z-index: 50;
+        .search{
+          margin-left:80vw ;margin-top: -7vh;
+        }
+    }
     
     .banner{
         width: 100vw;height: auto; background: #f1f5f6;margin-top: 40px;
