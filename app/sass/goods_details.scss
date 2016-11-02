@@ -41,8 +41,8 @@ section{margin-top: 8vh;width: 200vw;overflow: hidden;padding: 0;transition: all
 .goods_remark .remark_list li .remark_content{padding: 5vw;font-size: 16px;line-height: 30px;}
 .goods_remark .remark_list li .remark_content .date{margin-top: 10px;color: darkgray;}
 
-.footer{width: 100vw;height: 50px;position: fixed;bottom: 0px;background: darkmagenta;z-index: 10;}
-.footer a{text-decoration: none;float: left;height: 50px; line-height:50px;text-align: center;font-size: 18px;}
+.footer{width: 100vw;height: 40px;position: fixed;bottom: 0px;background: darkmagenta;z-index: 10;}
+.footer a{text-decoration: none;float: left;height: 50px; line-height:40px;text-align: center;font-size: 16px;}
 .footer a.iconfont{width: 30vw;background: white;color: #333333;position: relative;}
 .footer a.iconfont span{display: block; width:20px;height:20px;position: absolute;background:darkmagenta;top: 2px;left: 16vw;text-align: center;line-height: 20px;border-radius:50%;font-weight: 600;color:white;font-size: 14px;}
 .footer a.s_cart{width: 35vw;background: orangered;color: white;}

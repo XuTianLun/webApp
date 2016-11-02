@@ -31,26 +31,29 @@
        
      		$nav_list.hide();
        	
-       })           	
-
+       })  
+       //删除本地存储
+//		localStorage.clear();
 		//点击加入购物车
 		var goodsData = localStorage.getItem('goodsdata');//这里得到的有可能为null
 		goodsData = goodsData ? JSON.parse(goodsData) : [];
 		$("#goods_num").text(goodsData.length);	
 
 		var $shoppingcart_btn = $('#s_cart');
+		console.log()
 	//判断cookie是否存在，防止被覆盖
 	$shoppingcart_btn.on('singleTap',function(){
 			//获取商品名字
 		console.log(123)	
 		var name=$("#goods_name").text();
 		    //获取商品价格
-		var price=$("#prcie").text();
+		var price=$("#price").text();
+		
         	//获取商品图片
+        	
       var img=$('#goods_img').find('img').attr('src');
 	      
 	    goodsData.push({name:name,price:price,img:img});
-		console.log(goodsData);	
  			//将数组转换成字符串
  		localStorage.setItem('goodsdata',JSON.stringify(goodsData));
  		
@@ -58,7 +61,7 @@
         //设置顶部购物车显示的商品数
 		goodsData = localStorage.getItem('goodsdata');
 		goodsData = JSON.parse(goodsData);
-		
+	
 		$("#goods_num").text(goodsData.length);		
 		
 		})
