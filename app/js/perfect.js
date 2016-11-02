@@ -4,6 +4,21 @@
 
 	document.addEventListener("DOMContentLoaded",function(){
 		
+		/*头部菜单显示/隐藏*/
+		var ecaidan = document.querySelector(".headerlist");
+		var $liebiao = document.querySelector('.icon-liebiao');
+		$liebiao.onclick = function(){
+			if(ecaidan.style.opacity == 0){
+				ecaidan.style.opacity =0.9;
+			}else{
+				ecaidan.style.opacity = 0;	
+			}
+		}	
+
+		
+		
+		
+		//ajax数据请求
 		//获取元素节点
 		var btn = document.querySelector(".btn"); //提交按钮
 		var username = document.querySelector("#username");  //昵称
@@ -36,3 +51,4 @@
 		}
 		
 	});
+

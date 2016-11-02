@@ -10,9 +10,15 @@ section header h1 { /*标题*/ display: inline-block; width: 70%; height: 48px; 
 
 section header span.icon-fanhui { /*返回按钮*/ width: 10%; height: 48px; display: inline-block; float: left; margin-left: 15px; }
 
-section header span.icon-liebiao { /*列表按钮*/ width: 4%; height: 48px; display: inline-block; float: right; padding-right: 15px; }
+section header span.icon-liebiao { /*列表按钮*/ width: auto; height: auto; float: right; display: inline-block; margin-right: 20px; cursor: pointer; }
 
 section article { /*内容*/ width: 100%; width: 100%; height: 400px; padding-left: 9%; padding-right: 10%; padding-top: 30px; }
+
+section article span.headerlist { /*右侧固定菜单栏*/ position: fixed; display: block; top: 47px; right: 10px; opacity: 0; background: #666; border-radius: 5px; margin: 0; padding: 0; }
+
+section article span.headerlist a { display: block; font-weight: normal; text-decoration: none; font-size: 12px; text-align: center; width: 120px; padding: 10px 0; color: #fff; opacity: 0.9; cursor: pointer; }
+
+section article span.headerlist:before { content: ''; display: inline-block; position: absolute; right: 10px; top: -16px; width: 0; height: 0; border: 10px solid transparent; border-bottom: 8px solid #666; }
 
 section article p { margin: 0; padding: 0; }
 
