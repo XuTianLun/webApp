@@ -6,6 +6,7 @@
 		<title>完善资料页</title>
 		<link rel="stylesheet" type="text/css" href="../css/perfect.css"/>
 		<link rel="stylesheet" type="text/css" href="../font/iconfont.css"/>
+		<script src="../js/perfect.js" type="text/javascript" charset="utf-8"></script>
 		
 	</head>
 	<body>
@@ -20,16 +21,16 @@
 				<!--主体表单-->
 				<p class="user">
 					<span>昵称</span>
-					<input type="text" id="username"/>
+					<input type="text" id="username" maxlength="12" required="required" />
 				</p>
 				<p class="tel">
 					<span>手机号码</span>
-					<input type="telephone" id="telephone"/>
+					<input type="telephone" id="telephone" maxlength="11" required="required"  pattern="1[3578]\d{9}"/>
 				</p>				
 				<hgroup class="address">
 					<span>收货地址</span>
 					<p>
-						<input type="text" list="list1" placeholder="选择省" />
+						<input type="text" list="list1" placeholder="选择省" id="list_1" />
 						<datalist id="list1">
 							<option>广西省</option>
 							<option>广东省</option>
@@ -37,7 +38,7 @@
 							<option>湖南省</option>
 							<option>湖北省</option>
 						</datalist>
-						<input type="text" list="list2" placeholder="选择市" />
+						<input type="text" list="list2" placeholder="选择市" id="list_2" />
 						<datalist id="list2">
 							<option>柳州市</option>
 							<option>广州市</option>
@@ -45,7 +46,7 @@
 							<option>湖南省</option>
 							<option>武汉市</option>
 						</datalist>					
-						<input type="text" list="list3" placeholder="选择区/县" />
+						<input type="text" list="list3" placeholder="选择区/县" id="list_3" />
 						<datalist id="list3">
 							<option>鹿寨县</option>
 							<option>天河区</option>
@@ -56,7 +57,7 @@
 						<input type="text" placeholder="详细地址" id="txt" >
 					</p>
 				</hgroup>
-				<button>提交</button>
+				<input type="submit" class="btn"/>
 			</article>
 			<footer>
 				<!--固定底部-->

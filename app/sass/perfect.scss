@@ -17,7 +17,7 @@ section{  /*头部大框架*/
         color: #fff;
         line-height: 48px;
         overflow: hidden;    
-        h1{           
+        h1{   /*标题*/
             display: inline-block;
             width: 70%;
             height: 48px;
@@ -28,23 +28,179 @@ section{  /*头部大框架*/
             margin: 0;
             padding: 0;            
         }
-        span.icon-fanhui{ //返回按钮
+        span.icon-fanhui{ /*返回按钮*/
             width: 10%;
             height: 48px;
             display: inline-block;
             float: left;
             margin-left: 15px;            
         } 
-        span.icon-liebiao{ //列表按钮
-            width: auto;
+        span.icon-liebiao{ /*列表按钮*/
+            width: 4%;
             height: 48px;
             display: inline-block;
             float: right;
-            padding-right: 15px;            
+            padding-right: 15px;          
         }    
+        
+    }
+    article{ /*内容*/
+        width: 100%;
+        width: 100%;
+        height: 400px;
+        padding-left: 9%;
+        padding-right: 10%;
+        padding-top: 30px;    
+        p{
+            margin: 0;
+            padding: 0;
+        }
+        p.user{ /*昵称*/
+            width: 100%;
+            height: 34px;
+            text-align: center;
+            overflow: hidden;
+            span{
+                display: inline-block;
+                width: 20%;
+                height: 32px;
+                background: #eeeeee;
+                border: 1px solid #cccccc;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                color: #555555;
+                font-size: 14px;
+                text-align: center;
+                line-height: 32px;
+                margin: 0;
+                padding: 0;
+                float: left;                
+            }
+            input#username{ /*输入框*/
+                display: inline-block;
+                min-width: 62%;
+                height: 32px;
+                background: #eeeeee;
+                border: 1px solid #cccccc;
+                color: #555555;
+                font-size: 14px;
+                line-height: 32px;
+                margin: 0;
+                padding: 0;
+                float: left;                
+            }
+        }
+        p.tel{ /*手机号码*/
+            width: 100%;
+            height: 35px;
+            text-align: center;
+            margin-top: 10px;
+            overflow: hidden;   
+            span{
+                display: inline-block;
+                width: 20%;
+                height: 32px;
+                background: #eeeeee;
+                border: 1px solid #cccccc;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                color: #555555;
+                font-size: 14px;
+                text-align: center;
+                line-height: 32px;
+                margin: 0;
+                padding: 0;
+                float: left;                
+            }
+            input#telephone{ /*输入框*/
+                display: inline-block;
+                min-width: 62%;
+                height: 32px;
+                background: #eeeeee;
+                border: 1px solid #cccccc;
+                color: #555555;
+                font-size: 14px;
+                line-height: 32px;
+                margin: 0;
+                padding: 0;
+                float: left;                
+            }         
+        }
+        hgroup.address{ /*收货地址*/
+            width: 100%;
+            height: 170px;
+            text-align: center;
+            margin-top: 10px;
+            overflow: hidden;   
+            span{
+                display: inline-block;
+                width: 20%;
+                height: 168px;
+                background: #eeeeee;
+                border: 1px solid #cccccc;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                color: #555555;
+                font-size: 14px;
+                text-align: center;
+                line-height: 166px;
+                margin: 0;
+                padding: 0;
+                float: left;                
+            }
+            p{ /*选择框*/
+                display: inline-flex;
+                flex-direction: column;
+                flex:3;
+                min-width: 62%;
+                height: 168px;
+                background: #eeeeee;
+                border: 1px solid #cccccc;
+                color: #555555;
+                font-size: 14px;
+                line-height: 32px;
+                margin: 0;
+                padding: 0;
+                float: left; 
+                input{
+                    display: inline-flex;
+                    flex-direction: column;
+                    min-width: 62%;
+                    height: 36px;
+                    background: #eeeeee;
+                    border: 1px solid #cccccc;
+                    border-left: none;
+                    border-right: none;
+                    color: #555555;
+                    font-size: 14px;
+                    line-height: 32px;
+                    margin: 0;
+                    padding: 0 0 0 3px;
+                    float: left;                   
+                }
+                input#txt{ /*具体地址*/
+                    border-bottom: none;
+                    height: 58px;                        
+                    
+                }
+                :nth-child(1){
+                    border-top: none;
+                    border-left: none;                    
+                } 
             
-            
-              
+            }      
+        }
+        .btn{/*提交按钮*/
+            width: 82.5%;
+            height: 34px;
+            margin-top: 20px;
+            background: #8e488e;
+            color: #fff;
+            font-size: 14px;
+            border: none;    
+            cursor: pointer;        
+        }
+  
     }
     footer{ /*底部列表*/
         position: fixed;
@@ -59,7 +215,7 @@ section{  /*头部大框架*/
             margin: 0;
             padding: 0;
             color: #777777; 
-            li:nth-child(3){ //第三个子元素,高亮
+            li:last-child{ //第三个子元素,高亮
                 color: #8e488e;
             }
             li{  /*底部列表每一个子元素*/
