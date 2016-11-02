@@ -1,16 +1,16 @@
 @charset "UTF-8";
-body { margin: 0; padding: 0; }
+body { margin: 0; padding: 0; height: 130vh; }
 
 /*头部*/
-header { display: flex; position: relative; background: #8e488e; padding: 15px 0; color: #fff; font-size: 16px; font-weight: 600; justify-content: center; align-items: center; }
+header { display: flex; position: fixed; z-index: 10; top: 0; left: 0; width: 100%; background: #8e488e; padding: 15px 0; color: #fff; font-size: 16px; font-weight: 600; justify-content: center; align-items: center; }
 
-header a { flex: 1; text-align: left; margin-left: 10px; }
+header a { flex: 1; text-align: left; margin-left: 10px; text-decoration: none; color: #fff; }
 
 header span:nth-child(2) { flex: 4; text-align: center; }
 
 header span:last-child { position: relative; flex: 1; margin-right: 10px; text-align: right; }
 
-header span:last-child .caidan { position: absolute; top: 30px; right: 0; opacity: 0; }
+header span:last-child .caidan { position: absolute; top: 30px; right: 0; display: none; }
 
 header span:last-child .caidan ul { list-style: none; border-radius: 5px; background: #666; margin: 0; padding: 0; }
 
@@ -21,7 +21,7 @@ header span:last-child .caidan ul li a { display: block; font-weight: normal; te
 header span:last-child .caidan ul:before { content: ''; display: inline-block; position: absolute; right: 5px; top: -16px; width: 0; height: 0; border: 10px solid transparent; border-bottom: 8px solid #666; }
 
 /*佣金*/
-.commission { display: flex; }
+.commission { margin-top: 50px; display: flex; }
 
 .commission .commission_left, .commission .commission_right { display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 1; margin: 10px 0; border-right: 1px solid #ADADAD; }
 
@@ -47,12 +47,6 @@ header span:last-child .caidan ul:before { content: ''; display: inline-block; p
 .details div span { display: flex; color: #666; justify-content: center; flex: 1; padding: 10px 0; font-size: 12px; border-bottom: 1px solid #ddd; }
 
 /*脚部*/
-footer { position: fixed; left: 0; bottom: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 10px 0; }
+footer li:nth-child(4) a i { color: #8e488e; }
 
-footer nav { display: flex; justify-content: center; }
-
-footer nav a { color: #666; flex: 1; text-align: center; text-decoration: none; display: flex; flex-direction: column; }
-
-footer nav a span:first-child { font-size: 20px; }
-
-footer nav a span:nth-child(2) { margin: 5px; font-size: 12px; }
+footer li:nth-child(4) a div { color: #8e488e; }

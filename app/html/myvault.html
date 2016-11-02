@@ -3,8 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1"/>
+		<link rel="stylesheet" href="../css/reset.css" />
 		<link rel="stylesheet" href="../css/myvault.css" />
 		<link href="../iconfont/iconfont.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/common.css">
 		<title></title>
 		<script src="../js/zepto/dist/zepto.js"></script>
 		<script src="../js/zepto/src/ajax.js"></script>
@@ -14,13 +16,16 @@
 	</head>
 	<body>
 		<header>
-			<a class="iconfont icon-fanhui">
+			<a class="iconfont icon-fanhui" href="javascript:history.go(-1)">
 				
 			</a>
 			<span>
 				我的金库
 			</span>
-			<span class="iconfont icon-liebiao">
+			<span class="liebiao">
+				<span class="iconfont icon-liebiao">
+					
+				</span>
 				<div class="caidan">
 				<ul>
 					<li><a href="../index.html">首页</a></li>
@@ -55,14 +60,14 @@
 			
 		</section>
 		
-		<footer>
-			<nav>
-				<a href="#shouye"><span class="iconfont icon-shouye"></span><span>首页</span> </a>
-				<a href="#jifen"><span class="iconfont icon-jifen"></span><span>积分区</span></a>
-				<a href="#mofang"><span class="iconfont icon-mofang"></span><span>分类</span></a>
-				<a href="#mofang"><span class="iconfont icon-cart"></span><span>购物车</span></a>
-				<a href="#mofang"><span class="iconfont icon-gerenzhongxin"></span><span>个人中心</span></a>
-			</nav>
-		</footer>
+		<footer class="footer">
+				<ul class="list">
+					<li><a href="#"><i class="iconfont" id="homeicon1">&#xe61f;</i><div class="text">首页</div></a></li>
+					<li><a href="#"><i class="iconfont" id="homeicon2">&#xe654;</i><div class="text">积分</div></a></li>
+					<li><a href="#"><i class="iconfont" id="homeicon3">&#xe6d0;</i><div class="text">分类</div></a></li>
+					<li><a href="#"><i class="iconfont" id="homeicon4">&#xe629;</i><div class="text">购物车</div></a></li>
+					<li><a href="#"><i class="iconfont" id="homeicon5">&#xe65a;</i><div class="text">个人中心</div></a></li>
+				</ul>
+			</footer>
 	</body>
 </html>

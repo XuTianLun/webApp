@@ -2,12 +2,12 @@
 	document.addEventListener('DOMContentLoaded',function(){
 	var ecaidan = document.querySelector(".caidan");
 	var edetails = document.querySelector('.details');
-	var $liebiao = $('.icon-liebiao');
-	$liebiao.click(function(){
-		if($(this).find('.caidan').css("opacity") == 0){
-		$(this).find('.caidan').css({"opacity":0.9});
+	var $liebiao = $('.liebiao');
+	$liebiao.on('singleTap',function(){
+		if($(this).find('.caidan').css("display") == "none"){
+		$(this).parent().find('.caidan').css({"display":"block"});
 		}else{
-		$(this).find('.caidan').css({"opacity":0});	
+		$(this).find('.caidan').css({"display":"none"});	
 		}
 	})
 	var i = 1;
