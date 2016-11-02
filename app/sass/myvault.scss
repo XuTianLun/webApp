@@ -14,28 +14,60 @@ header{
      font-weight: 600;
      justify-content: center;
      align-items: center;
-     span{
+     a{
          flex: 1;
-         text-align: center;
-//       border-right:1px solid #000000 ;
+         text-align:left;
+         margin-left: 10px;
+        
      }
      span:nth-child(2){
          flex: 4;
-        
+         text-align: center;
+         
      }
-     .caidan{
-         display: flex;
-         display: none;
-         flex-direction: column;
-         position: absolute;
-         background: #666;
-         top:45px;
-         font-size:12px ;
-         right: 10px;
-         span{
-             padding: 8px 25px;
-             font-weight: normal;
-         }
+     span:last-child{
+         position: relative;
+         flex: 1;
+         margin-right: 10px;
+         text-align: right;
+         .caidan{
+            position: absolute;
+            top:30px;
+            right:0;
+            opacity: 0;
+            ul{
+                list-style: none;
+                border-radius: 5px;
+                 background: #666;
+                margin: 0;
+                padding: 0;
+                li{
+                    opacity: 0.9;
+                    a{
+                        display: block;
+                        font-weight: normal;
+                        text-decoration: none;
+                        font-size: 12px;
+                        text-align: center;
+                        width: 120px;
+                        padding: 10px 0;
+                        color: #fff;
+                    }
+                }
+                &:before{
+                    content: '';
+                    display:inline-block;
+                    position: absolute;
+                    right: 5px;
+                    top:-16px;
+                    width: 0;
+                    height: 0;
+                    border: 10px solid transparent;
+                    border-bottom:8px solid #666;
+                }
+            }
+        
+        }
      }
 }
 /*佣金*/

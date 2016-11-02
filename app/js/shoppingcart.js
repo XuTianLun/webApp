@@ -1,0 +1,118 @@
+;
+$(function() {
+
+	//点击列表图标导航出现
+	var $doc = $(document);
+	var $nav = $('#navLsit');
+	var $navBtn = $nav.find("span");
+	var $nav_list = $nav.find(".list_box");
+	$navBtn.on('singleTap', function() {
+
+			$nav_list.show();
+		})
+		//点击任意位置隐藏
+	$doc.on('doubleTap', function() {
+
+			$nav_list.hide();
+
+		})
+		//加载商品
+
+	var goodsData = localStorage.getItem('goodsdata'); //这里得到的有可能为null
+	goodsData = goodsData ? JSON.parse(goodsData) : [];
+	//  创建匿名函数
+	(function() {
+		//获取商品要显示的区域
+		var $goodsList = $("#goods_list")
+			//创建价格合计变量
+		var total_price = 0;
+		if(goodsData.length != 0) {
+			for(var i = 0; i < goodsData.length; i++) {
+				//计算总价钱 
+//				total_price = total_price + parseInt(JSON.stringify(goodsData[i].price));
+				//创建复选框并添加属性 
+				var $check = $("<input/>").attr("type", "checkbox");
+				$check.addClass('check');
+				//创建img标签并添加属性值
+				var $img = $("<img/>").attr("src", goodsData[i].img);
+
+				//创建放置商品信息的p标签并赋值
+				var $p = $('<p/>');
+				var $aName = $("<a/>").attr("href", "#").html(goodsData[i].name);
+
+				//创建放置商品单价的标签
+				var $Price = $("<span/>").html(goodsData[i].price).addClass("price");
+				//创建对商品进行操作的加减按钮
+				//容器
+				var $i = $('<i/>').addClass('number');
+				//减
+				var $btn_minus = $('<button/>').addClass('minus').text("-");
+				//数量
+				var $input = $("<input/>").attr('src', 'text').val('1');
+				//加
+				var $btn_add = $('<button/>').addClass('add').text("+");
+				//删除
+				var $remove = $('<button/>').addClass('remove iconfont icon-lajixiang').text('删除');
+				$btn_minus.appendTo($i);
+				$input.appendTo($i);
+				$btn_add.appendTo($i);
+				$aName.appendTo($p);
+				$Price.appendTo($p);
+				$remove.appendTo($p);
+				$i.appendTo($p);
+
+				var $li = $("<li/>")
+					//所有添加到li
+				$check.appendTo($li);
+				$img.appendTo($li);
+				$p.appendTo($li);
+
+				//li添加到页面显示区域
+				$li.appendTo($goodsList);
+			}
+			$('#buy').find('span').text(total_price);
+		}
+
+	})()
+
+	var $goodslist = $('#goods_list');
+	var $btn_minus = $goodslist.find('li').find('.minus');
+	var $btn_add = $goodslist.find('li').find('.add');
+	
+	//设置商品数量 点击“加”时商品数量加1
+	$goodslist.on('singleTap', '.add', function() {
+
+			var index = $(this).parent().parent().parent().index();
+			var count = $(this).prev('input').val();
+			count++;
+			$(this).prev('input').val(count);
+		})
+		//		//设置商品数量 点击“减”时商品数量减1	
+	$btn_minus.on('singleTap', function() {
+		var count = $(this).next('input').val();
+		//		      //判断是否减到0；到0则等于1；					
+		if(count == 1) {
+			count = 1;
+		} else {
+			count--;
+		}
+		$(this).next('input').val(count);
+	})
+
+	//删除商品
+	$goodslist.on('singleTap', '.remove', function() {
+		//获取本地存储
+		goodsData = localStorage.getItem('goodsdata'); 
+		goodsData =  JSON.parse(goodsData);
+		//删除元素
+		var index = $(this).parent().parent().parent().index();
+		$goodslist.find("li").eq(index).remove();
+		//重新设置本地存储
+		var arr = goodsData.splice(index,1);
+		localStorage.setItem('goodsdata',JSON.stringify(arr));
+
+	})
+	
+
+
+})

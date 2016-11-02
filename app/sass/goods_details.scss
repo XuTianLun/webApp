@@ -1,8 +1,9 @@
 html,body{width: 100%;height: 100%; margin: 0;padding: 0;overflow-x: hidden;}
-.header{width: 100%;height: 7vh;background: darkmagenta;position: fixed;z-index: 10;padding: 0 10px;}
-.header span.icon-xiangzuojiantou{color: white;font-size: 22px;float: left; padding-top:1.5vh ;}
+ul,li{margin: 0;padding: 0;list-style: none;}
+.header{width: 100%;height: 7vh;background: darkmagenta;position: fixed;z-index: 10;}
+.header a.icon-xiangzuojiantou{color: white;font-size: 22px;float: left; padding-top:1.5vh ;text-decoration: none;}
 .header span.icon-liebiao{color: white;font-size: 22px;float: right; padding-top:1.5vh ;margin-right: 5vw;}
-.header .btn{float: left;width: 40vw;height: 7vh;text-align: center;line-height: 7vh;margin-left: 25vw;}
+.header .btn{float: left;width: 40vw;height: 7vh;text-align: center;line-height: 7vh;margin-left: 30vw;}
 .header .btn a{float: left;width: 15vw;height: 7vh;color: white;text-decoration: none;font-size: 16px;margin-right: 1vw;}
 .header .btn .atver{background: white;color: black;}
 .header nav{position: relative;float:right;}
@@ -21,13 +22,12 @@ html,body{width: 100%;height: 100%; margin: 0;padding: 0;overflow-x: hidden;}
 .header nav .nav_list li{padding: 5px;margin-bottom: 5px;border-bottom: 1px solid gray;text-align: center;}
 .header nav .nav_list li:last-child{border: none;}
 .header nav .nav_list li a{text-decoration: none;color: darkgray;font-weight: 600;font-size: 14px;}
-section{margin-top: 8vh;position: relative;width: 200vw;overflow: hidden;padding: 0;transition: all 0.5s;}
+section{margin-top: 8vh;width: 200vw;overflow: hidden;padding: 0;transition: all 0.5s;}
 .xiangqing{width: 100vw;float: left;}
 .swiper-wrapper .swiper-slide{text-align: center;}
 .goods_information{padding: 2vw;}
 .goods_information .goods_name{color: #333333;font-size: 16px;}
 .goods_information .price{font-size: 16px;color: red;}
-ul,li{margin: 0;padding: 0;list-style: none;}
 .goods_information .information_list li{padding: 1vh 0;line-height: 3vh;font-size: 16px;}
 .goods_information .information_list li span{color: gray;font-size: 14px;}
 .goods_information img{display: block; width: 100vw;margin-left: -2vw;}
@@ -41,8 +41,9 @@ ul,li{margin: 0;padding: 0;list-style: none;}
 .goods_remark .remark_list li .remark_content{padding: 5vw;font-size: 16px;line-height: 30px;}
 .goods_remark .remark_list li .remark_content .date{margin-top: 10px;color: darkgray;}
 
-.footer{width: 100%;height: 50px;position: fixed;bottom: 0;background: darkmagenta;}
-.footer a{text-decoration: none;float: left;height: 50px; line-height:50px;text-align: center;font-size: 18px;}
-.footer a.iconfont{width: 30vw;background: white;color: #333333;}
+.footer{width: 100vw;height: 40px;position: fixed;bottom: 0px;background: darkmagenta;z-index: 10;}
+.footer a{text-decoration: none;float: left;height: 50px; line-height:40px;text-align: center;font-size: 16px;}
+.footer a.iconfont{width: 30vw;background: white;color: #333333;position: relative;}
+.footer a.iconfont span{display: block; width:20px;height:20px;position: absolute;background:darkmagenta;top: 2px;left: 16vw;text-align: center;line-height: 20px;border-radius:50%;font-weight: 600;color:white;font-size: 14px;}
 .footer a.s_cart{width: 35vw;background: orangered;color: white;}
 .footer a.buy{width:35vw;background: darkmagenta;color: white;}

@@ -61,11 +61,11 @@ gulp.task('buildjs',function(){
 	.pipe(gulp.dest('./app/js'))
 	
 	//压缩
-	.pipe(jsmin({
-		mangle:true
-	}))
-	.pipe(rename({suffix:'.min'}))
-	.pipe(gulp.dest('./dist/js'))
+//	.pipe(jsmin({
+//		mangle:true
+//	}))
+//	.pipe(rename({suffix:'.min'}))
+//	.pipe(gulp.dest('./dist/js'))
 })
 
 //压缩html文件
