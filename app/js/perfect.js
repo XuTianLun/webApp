@@ -57,9 +57,6 @@
 		})		
 		
 		
-		
-
-		
 		//在点击事件里面判断条件
 		var $username = $("#username");//昵称
 		var $telephone = $("#telephone");//手机号码	
@@ -106,8 +103,9 @@
 				localStorage.setItem("datalist",JSON.stringify(datalist));
 
 				alert("提交成功!");
+				open("center.html"); //跳转到个人中心
 			}else{
-				alert("提交失败,手机号码不合格")
+				alert("提交失败,手机号码不合格!")
 			}	
 		
 		})
