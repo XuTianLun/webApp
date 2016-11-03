@@ -2,11 +2,16 @@ $bgcolor:#8e488e;
 body{
     margin: 0;
     padding: 0;
+    height: 130vh;
 }
 /*头部*/
 header{
     display: flex;
-    position: relative;
+    position: fixed;
+     z-index: 10;
+    top:0;
+    left: 0;
+    width: 100%;
      background:#8e488e;
      padding: 15px 0;
      color: #fff;
@@ -18,7 +23,8 @@ header{
          flex: 1;
          text-align:left;
          margin-left: 10px;
-        
+         text-decoration: none;
+         color: #fff;
      }
      span:nth-child(2){
          flex: 4;
@@ -34,7 +40,7 @@ header{
             position: absolute;
             top:30px;
             right:0;
-            opacity: 0;
+            display: none;
             ul{
                 list-style: none;
                 border-radius: 5px;
@@ -70,36 +76,141 @@ header{
         }
      }
 }
-/*脚部*/
+//类型
 .type{
+    margin-top: 50px;
     display: flex;
     padding: 20px 0;
     border-bottom: 1px solid #333;
+    background: f1f5f6;
     span{
         flex: 1;
         text-align: center;
         color: #333;
         border-right: 1px solid #333;
+         background: f1f5f6;
+        font-size: 1em;
     }
     span:last-child{
         border-right: none;
     }
 }
-footer{         
-    position: fixed;left: 0;bottom:0;right: 0;
-    background: #fff;
-    border-top:1px solid #ddd;
-    padding: 10px 0;
-    nav{display: flex;justify-content: center;
-         a{color: #666;flex: 1;text-align: center;text-decoration: none;
-            display: flex;flex-direction: column;
-            span:first-child{
-                font-size: 20px;
+/*商品信息*/
+.order_details{
+    background: f1f5f6;
+    padding-bottom: 10px;
+    div{
+        display: flex;
+        flex-wrap: wrap;
+        div{
+            display: flex;
+            width: 100%;
+        }
+        .header{
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            span{
+                flex: 1;
+                font-size: 1em;
+                margin-left: 10px;
             }
-            span:nth-child(2){
-                margin: 5px;
-                font-size: 12px;
+            span:last-child{
+              text-align: right;
+              margin-right: 10px;
+              color: palevioletred;
+              
             }
-         }   
-      }
+        }
+        .content{
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            padding-bottom: 10px;          
+            flex-wrap: wrap;
+            section{
+            display: flex;
+            width: 100%;
+             img{
+                width: 6em;
+                height: 8em;
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                flex: 6;
+               
+                span{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                }
+                span:first-child{
+                   margin-bottom: 30px;
+                }
+            }
+            span{
+                flex: 1;
+               display: flex;
+               justify-content: flex-end;
+               align-items: flex-end;
+               margin-right: 20px;
+             
+            }
+            }
+            
+        }
+        .total{
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 0;
+            font-size: 1em;
+            
+             border-bottom: 1px solid #ddd;
+            span{
+                color: orangered;
+                margin-right: 10px;
+            }
+        }
+        .btn{
+            padding: 10px 0;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: nowrap;
+            span{
+                padding: 1vw 2vw;
+                border: 1px solid #E0E0E0;
+                border-radius: 5px;
+                margin-right: 10px;
+                font-size: 1em;
+            }
+        }
     }
+}
+/*脚部*/
+footer{         
+    
+    li:nth-child(4){
+      a{
+          i{
+              color:#8e488e;
+          }
+          div{
+               color:#8e488e;
+          }
+      } 
+     }
+    }
+    //底部
+.footer{
+    width: 100vw; height: 8vh; background: #fff; position: fixed;bottom: 0;
+    .list{
+        display: flex; flex-flow: row nowrap;
+        li{
+            float: left; width: 20vw;text-align: center;font-size: 12px;line-height: 3vh;margin-top: 1vh;flex: 1;
+            a{color: #777;text-decoration: none;}
+            #highlight{
+                color:#8e488e ;
+            }
+        }
+    }
+         
+}

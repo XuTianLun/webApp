@@ -2,22 +2,29 @@ $bgcolor:#8e488e;
 body{
     margin: 0;
     padding: 0;
+    height: 120vh;
 }
 /*头部*/
 header{
     display: flex;
-    position: relative;
-     background:#8e488e;
-     padding: 15px 0;
-     color: #fff;
-     font-size: 16px;
-     font-weight: 600;
-     justify-content: center;
-     align-items: center;
+    position: fixed;
+     z-index: 10;
+    top:0;
+    left: 0;
+    width: 100%;
+    background:#8e488e;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
      a{
          flex: 1;
          text-align:left;
          margin-left: 10px;
+         text-decoration: none;
+         color: #fff;
         
      }
      span:nth-child(2){
@@ -34,7 +41,7 @@ header{
             position: absolute;
             top:30px;
             right:0;
-            opacity: 0;
+            display: none;
             ul{
                 list-style: none;
                 border-radius: 5px;
@@ -72,6 +79,7 @@ header{
 }
 /*佣金*/
 .commission{
+    margin-top: 50px;
     display: flex;
     .commission_left,.commission_right{
         display: flex;
@@ -141,20 +149,15 @@ header{
 }
 /*脚部*/
 footer{         
-    position: fixed;left: 0;bottom:0;right: 0;
-    background: #fff;
-    border-top:1px solid #ddd;
-    padding: 10px 0;
-    nav{display: flex;justify-content: center;
-         a{color: #666;flex: 1;text-align: center;text-decoration: none;
-            display: flex;flex-direction: column;
-            span:first-child{
-                font-size: 20px;
-            }
-            span:nth-child(2){
-                margin: 5px;
-                font-size: 12px;
-            }
-         }   
-      }
+    
+    li:nth-child(4){
+      a{
+          i{
+              color:#8e488e;
+          }
+          div{
+               color:#8e488e;
+          }
+      } 
+     }
     }

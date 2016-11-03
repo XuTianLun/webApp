@@ -1,63 +1,123 @@
 [
 	{
-		"title":"iPad",
-		"title2":"短裙",		
-		"imgurl":"../img/21.jpg",
-		"imgurl2":"../img/54.jpg"
+		"title":"iPad",	
+		"page":"1",	
+		"imgurl":"../img/21.jpg"
+		
 
 	},
 	{
 		"title":"iPhone",
-		"title2":"长裙",	
-		"imgurl":"../img/22.jpg",
-		"imgurl2":"../img/55.jpg"
+		"page":"1",			
+		"imgurl":"../img/22.jpg"
 
 	},
 	{
 		"title":"Laptop",
-		"title2":"叶子裙",	
-		"imgurl":"../img/23.jpg",
-		"imgurl2":"../img/56.jpg"
+		"page":"1",	
+		"imgurl":"../img/23.jpg"
 
 	},
 	{
-		"title":"iPad",
-		"title2":"超短裙",	
-		"imgurl":"../img/21.jpg",
-		"imgurl2":"../img/57.jpg"
+		"title":"iPad",	
+		"page":"1",	
+		"imgurl":"../img/21.jpg"
+		
+
 	},
 	{
 		"title":"iPhone",
-		"title2":"蝴蝶灰裙",	
-		"imgurl":"../img/22.jpg",
-		"imgurl2":"../img/58.jpg"
+		"page":"1",			
+		"imgurl":"../img/22.jpg"
 
 	},
 	{
 		"title":"Laptop",
-		"title2":"超短裙",			
-		"imgurl":"../img/23.jpg",
-		"imgurl2":"../img/59.jpg"
+		"page":"1",	
+		"imgurl":"../img/23.jpg"
 
 	},	
 	{
-		"title":"iPad",
-		"title2":"蝴蝶灰裙",	
-		"imgurl":"../img/21.jpg",
-		"imgurl2":"../img/54.jpg"
+		"title":"超短裙",			
+		"page":"2",
+		"imgurl":"../img/54.jpg"
 	},
 	{
-		"title":"iPhone",
-		"title2":"美美裙",	
-		"imgurl":"../img/22.jpg",
-		"imgurl2":"../img/55.jpg"
+		"title":"蝴蝶灰裙",	
+		"page":"2",
+		"imgurl":"../img/55.jpg"
 
 	},
 	{
-		"title":"Laptop",
-		"title2":"黑裙",	
-		"imgurl":"../img/23.jpg",
-		"imgurl2":"../img/56.jpg"
+		"title":"超短裙",	
+		"page":"2",		
+		"imgurl":"../img/56.jpg"
 
-	}	
+	},	
+	{
+		"title":"超短裙",			
+		"page":"2",
+		"imgurl":"../img/54.jpg"
+	},
+	{
+		"title":"蝴蝶灰裙",	
+		"page":"2",
+		"imgurl":"../img/55.jpg"
+
+	},
+	{
+		"title":"超短裙",	
+		"page":"2",		
+		"imgurl":"../img/56.jpg"
+
+	},
+	{
+		"title":"美妮",	
+		"page":"3",		
+		"imgurl":"../img/18.jpg"
+
+	},	
+	{
+		"title":"灰蓝",	
+		"page":"3",
+		"imgurl":"../img/57.jpg"
+	},
+	{
+		"title":"黄芩",	
+		"page":"3",
+		"imgurl":"../img/58.jpg"
+
+	},
+	{
+		"title":"黑裙",	
+		"page":"3",
+		"imgurl":"../img/59.jpg"
+
+	},
+	{
+		"title":"美妮",	
+		"page":"3",		
+		"imgurl":"../img/18.jpg"
+
+	},	
+	{
+		"title":"灰蓝",	
+		"page":"3",
+		"imgurl":"../img/57.jpg"
+	},
+	{
+		"title":"黄芩",	
+		"page":"3",
+		"imgurl":"../img/58.jpg"
+
+	},
+	{
+		"title":"黑裙",	
+		"page":"3",
+		"imgurl":"../img/59.jpg"
+
+	}
+	
+	
+		
 ]
