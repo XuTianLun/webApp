@@ -21,42 +21,32 @@
 	},
 	{
 		"id":"G005",
-		"imgurl":"img/31.jpg",
-		"url":"#"
-	},
-	{
-		"id":"G006",
 		"imgurl":"img/32.jpg",
 		"url":"#"
 	},
 	{
-		"id":"G007",
+		"id":"G006",
 		"imgurl":"img/33.jpg",
 		"url":"#"
 	},
 	{
-		"id":"G008",
+		"id":"G007",
 		"imgurl":"img/34.jpg",
+		"url":"#"
+	},
+	{
+		"id":"G008",
+		"imgurl":"img/35.jpg",
 		"url":"#"
 	},
 	{	
 		"id":"G009",
-		"imgurl":"img/35.jpg",
-		"url":"#"
-	},
-	{
-		"id":"G0010",
 		"imgurl":"img/36.jpg",
 		"url":"#"
 	},
 	{
-		"id":"G0011",
+		"id":"G0010",
 		"imgurl":"img/37.jpg",
-		"url":"#"
-	},
-	{
-		"id":"G0012",
-		"imgurl":"img/23.jpg",
 		"url":"#"
 	}
 ]

@@ -2,14 +2,6 @@
 	document.addEventListener('DOMContentLoaded',function(){
 	var ecaidan = document.querySelector(".caidan");
 	var edetails = document.querySelector('.details');
-	var $liebiao = $('.liebiao');
-	$liebiao.on('singleTap',function(){
-		if($(this).find('.caidan').css("display") == "none"){
-		$(this).parent().find('.caidan').css({"display":"block"});
-		}else{
-		$(this).find('.caidan').css({"display":"none"});	
-		}
-	})
 	var i = 1;
 	$.ajax({
 		type:"get",

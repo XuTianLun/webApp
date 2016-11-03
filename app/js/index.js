@@ -96,12 +96,18 @@ window.onload = function(){
 			}else{
 				$(".comeback").fadeOut();
 			}
-			
-			$('.comeback').on('click',function(){
-				$(window).scrollTop(0);
-			});
-			
 		});
+<<<<<<< HEAD
+		
+		$('.comeback').on('click',function(){
+			$('html body').animate({scrollTop:0});
+		});
+		
+=======
+		$('.comeback').on('click',function(){
+				$('html body').animate({scrollTop:0});
+			});
+>>>>>>> 9f6cdb14c3ecb27bb799c002175166f48157d4e8
 	});
 	
 		
