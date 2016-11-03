@@ -96,12 +96,12 @@ window.onload = function(){
 			}else{
 				$(".comeback").fadeOut();
 			}
-			
-			$('.comeback').on('click',function(){
-				$(window).scrollTop(0);
-			});
-			
 		});
+		
+		$('.comeback').on('click',function(){
+			$('html body').animate({scrollTop:0});
+		});
+		
 	});
 	
 		
