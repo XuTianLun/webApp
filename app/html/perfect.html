@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 		<title>完善资料页</title>
 		<link rel="stylesheet" type="text/css" href="../css/perfect.css" />
 		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
 		<script src="../js/zepto/dist/zepto.js"></script>
+		<script src="../js/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/touch.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/perfect.js" type="text/javascript" charset="utf-8"></script>
 
@@ -23,51 +24,56 @@
 				<span class="iconfont icon-liebiao"></span>
 			</header>
 			<article>
+				
 				<!--头部菜单-->
-				<span class="headerlist">
+				<!--<span class="headerlist">
 					<a href="#">首页</a>
 					<a>积分区</a>
 					<a>夺宝区</a>
 					<a>分类</a>
 					<a>购物车</a>
 					<a>个人中心</a>			
-				</span>
+				</span>-->
 
 				<!--主体表单-->
 				<p class="user">
 					<span>昵称</span>
-					<input type="text" id="username" maxlength="12" required="required" />
+					<input type="text" id="username" maxlength="10" required="required" />
 				</p>
 				<p class="tel">
 					<span>手机号码</span>
 					<input type="telephone" id="telephone" maxlength="11" required="required" pattern="1[3578]\d{9}" />
 				</p>
+				
+				<!--收货地址-->
 				<hgroup class="address">
 					<span>收货地址</span>
 					<p>
 						<input type="text" list="province" placeholder="选择省" id="list_1" />
 						<datalist id="province">
-							<option>广西省</option>
 						</datalist>
 						
 						<input type="text" list="city" placeholder="选择市" id="list_2" />
 						<datalist id="city">
-							<option>柳州市</option>
 						</datalist>
-						
-						
+
 						<input type="text" list="county" placeholder="选择区/县" id="list_3" />
 						<datalist id="county">
-							<option>鹿寨县</option>
+							<option value="天河" label="">天河</option>
+							<option value="天河" label="">天河</option>
+							<option value="天河" label="">天河</option>
+							<option value="天河" label="">天河</option>
+							<option value="天河" label="">天河</option>
 						</datalist>
-						
-						
+
 						<input type="text" placeholder="详细地址" id="txt">
-						
-						
+
 					</p>
 				</hgroup>
+				<!--提交按钮-->
 				<input type="submit" class="btn" />
+				
+				
 			</article>
 			
 				<!--固定底部-->
