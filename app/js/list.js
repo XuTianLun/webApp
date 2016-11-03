@@ -63,7 +63,7 @@
 							.html($("<img/>").addClass("img").attr("src",item.imgurl)).appendTo($li);
 							//标题							
 						    $("<a/>").addClass("title_a").attr("href","goods_details.html")
-						    .html($("<p/>").addClass("p").html(item.title)).appendTo($li); //标题
+						    .html($("<p/>").addClass("p").html(item.title)).appendTo($li); 
 						    $li.appendTo($ul);		
 						}
 					}
