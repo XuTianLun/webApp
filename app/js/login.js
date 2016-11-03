@@ -1,5 +1,6 @@
 ;(function(){
 	document.addEventListener('DOMContentLoaded',function(){
+		
 		//获取本地存储
 		var register = localStorage.getItem('register');
 		register = register ? JSON.parse(register) : [];
@@ -9,7 +10,7 @@
 		}
 		 //验证手机号码
 		  var arr =[false,false];
-		  console.log(arr);
+
 		    $('#phone').blur(function(){
 		    	var num = $(this).val();
 		    	if(num!=""){

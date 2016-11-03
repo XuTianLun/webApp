@@ -57,8 +57,8 @@ gulp.task('buildjs',function(){
 	gulp.src('./app/js/*.js')
 	
 	//合并js
-	.pipe(concat('app.js'))
-	.pipe(gulp.dest('./app/js'))
+//	.pipe(concat('app.js'))
+//	.pipe(gulp.dest('./app/js'))
 	
 	//压缩
 //	.pipe(jsmin({

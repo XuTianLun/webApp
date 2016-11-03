@@ -1,17 +1,6 @@
 (function(){
 	document.addEventListener('DOMContentLoaded',function(){
-		var $liebiao = $('.liebiao');
-	
-	//列表菜单
-	$liebiao.on('singleTap',function(){
-		if($(this).find('.caidan').css("display") == "none"){
-		$(this).parent().find('.caidan').css({"display":"block"});
-		}else{
-		$(this).find('.caidan').css({"display":"none"});	
-		}
-	})
 		
-	
 	
 	var $order_details = $('.order_details');
 	//本地存储
