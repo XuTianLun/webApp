@@ -38,5 +38,5 @@ $(function(){
 		$("#homeicon5").css({"color":"#8e488e"});
 	})
 	
-})
+});
 	
