@@ -15,6 +15,7 @@ section{  /*头部大框架*/
         background:#8e488e;
         color: #fff;
         line-height: 48px;
+        position: fixed;
         overflow: hidden;    
         h1{   /*标题*/
             display: inline-block;
@@ -45,11 +46,11 @@ section{  /*头部大框架*/
         
     }
     article{ /*内容*/
+        padding-top: 10vh;
         width: 100vw;
         height: 400px;
         padding-left: 9%;
         padding-right: 10%;
-        padding-top: 30px;
         span.headerlist{/*右侧固定菜单栏*/
                 position: fixed;
                 display: block;
@@ -159,6 +160,41 @@ section{  /*头部大框架*/
                 float: left;                
             }         
         }
+//      div.boxaddress{
+//          width: 100vw;
+//          height: 180px;
+//          p.col{ /*收货地址*/
+//              width: auto;
+//              height: auto;
+//              text-align: center;              
+//              float: left;
+//              span.delivery{
+//                  display: inline-block;
+//                  width: 20vw;
+//                  height: 168px;
+//                  background: #eeeeee;
+//                  border: 1px solid #cccccc;
+//                  border-top-left-radius: 5px;
+//                  border-bottom-left-radius: 5px;
+//                  color: #555555;
+//                  font-size: 14px;
+//                  text-align: center;
+//                  line-height: 166px;
+//                  margin: 0;
+//                  padding: 0;
+//                  float: left;                
+//              }
+//              #list_1{
+//                  width: 50vw;
+//              }
+//              
+//
+//          }
+//
+//
+//      }
+
+
         hgroup.address{ /*收货地址*/
             width: 100vw;
             height: 170px;
