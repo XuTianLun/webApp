@@ -4,7 +4,7 @@ body, html, ul { list-style: none; width: 100vw; height: auto; margin: 0; paddin
 
 section { /*头部大框架*/ height: auto; }
 
-section header { width: 100vw; height: 48px; background: #8e488e; color: #fff; line-height: 48px; overflow: hidden; }
+section header { width: 100vw; height: 48px; background: #8e488e; color: #fff; line-height: 48px; position: fixed; overflow: hidden; }
 
 section header h1 { /*标题*/ display: inline-block; width: 70%; height: 48px; line-height: 48px; font-size: 17px; color: #fff; text-align: center; margin: 0; padding: 0; }
 
@@ -12,7 +12,7 @@ section header span.icon-fanhui { /*返回按钮*/ width: 10%; height: 48px; dis
 
 section header span.icon-liebiao { /*列表按钮*/ width: auto; height: auto; float: right; display: inline-block; margin-right: 20px; cursor: pointer; }
 
-section article { /*内容*/ width: 100vw; height: 400px; padding-left: 9%; padding-right: 10%; padding-top: 30px; }
+section article { /*内容*/ padding-top: 10vh; width: 100vw; height: 400px; padding-left: 9%; padding-right: 10%; }
 
 section article span.headerlist { /*右侧固定菜单栏*/ position: fixed; display: block; top: 47px; right: 10px; opacity: 0; background: #666; border-radius: 5px; margin: 0; padding: 0; }
 
