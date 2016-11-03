@@ -3,7 +3,7 @@ window.onload = function(){
 	//轮播图
 	var mySwiper = new Swiper('.swiper-container', {
 		autoplay: 2000,//可选选项，自动滑动
-		loop:true,
+		loop:true, //循环（无缝轮播）
 		pagination : '.swiper-pagination',
 	});
 	
