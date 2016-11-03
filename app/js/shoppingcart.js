@@ -38,7 +38,7 @@ $(function() {
 				//创建放置商品信息的p标签并赋值
 				var $p = $('<p/>');
 				var $aName = $("<a/>").attr("href", "#").html(goodsData[i].name);
-
+					$aName.addClass('name');
 				//创建放置商品单价的标签
 				var $Price = $("<span/>").html(goodsData[i].price).addClass("price");
 				//创建对商品进行操作的加减按钮
@@ -184,9 +184,11 @@ $(function() {
 			}
 			//设置本地存储
 		localStorage.setItem('buydata', JSON.stringify(buyData));
+		
 			
 		}
 
 		})
 		
+		console.log(localStorage.getItem('buydata'));
 });
