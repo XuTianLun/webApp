@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /*列表页样式*/
-body, html, ul { list-style: none; width: 100%; height: auto; margin: 0; padding: 0; }
+body, html, ul { list-style: none; width: 100vw; height: auto; margin: 0; padding: 0; }
 
-section { /*头部大框架*/ width: 100%; height: 2000px; }
+section { /*头部大框架*/ height: auto; }
 
-section header { width: 100%; height: 48px; background: #8e488e; color: #fff; line-height: 48px; overflow: hidden; }
+section header { width: 100vw; height: 48px; background: #8e488e; color: #fff; line-height: 48px; overflow: hidden; }
 
 section header h1 { /*标题*/ display: inline-block; width: 70%; height: 48px; line-height: 48px; font-size: 17px; color: #fff; text-align: center; margin: 0; padding: 0; }
 
@@ -12,7 +12,7 @@ section header span.icon-fanhui { /*返回按钮*/ width: 10%; height: 48px; dis
 
 section header span.icon-liebiao { /*列表按钮*/ width: auto; height: auto; float: right; display: inline-block; margin-right: 20px; cursor: pointer; }
 
-section article { /*内容*/ width: 100%; width: 100%; height: 400px; padding-left: 9%; padding-right: 10%; padding-top: 30px; }
+section article { /*内容*/ width: 100vw; height: 400px; padding-left: 9%; padding-right: 10%; padding-top: 30px; }
 
 section article span.headerlist { /*右侧固定菜单栏*/ position: fixed; display: block; top: 47px; right: 10px; opacity: 0; background: #666; border-radius: 5px; margin: 0; padding: 0; }
 
@@ -22,19 +22,19 @@ section article span.headerlist:before { content: ''; display: inline-block; pos
 
 section article p { margin: 0; padding: 0; }
 
-section article p.user { /*昵称*/ width: 100%; height: 34px; text-align: center; overflow: hidden; }
+section article p.user { /*昵称*/ width: 100vw; height: 34px; text-align: center; overflow: hidden; }
 
 section article p.user span { display: inline-block; width: 20%; height: 32px; background: #eeeeee; border: 1px solid #cccccc; border-top-left-radius: 5px; border-bottom-left-radius: 5px; color: #555555; font-size: 14px; text-align: center; line-height: 32px; margin: 0; padding: 0; float: left; }
 
 section article p.user input#username { /*输入框*/ display: inline-block; min-width: 62%; height: 32px; background: #eeeeee; border: 1px solid #cccccc; color: #555555; font-size: 14px; line-height: 32px; margin: 0; padding: 0; float: left; }
 
-section article p.tel { /*手机号码*/ width: 100%; height: 35px; text-align: center; margin-top: 10px; overflow: hidden; }
+section article p.tel { /*手机号码*/ width: 100vw; height: 35px; text-align: center; margin-top: 10px; overflow: hidden; }
 
 section article p.tel span { display: inline-block; width: 20%; height: 32px; background: #eeeeee; border: 1px solid #cccccc; border-top-left-radius: 5px; border-bottom-left-radius: 5px; color: #555555; font-size: 14px; text-align: center; line-height: 32px; margin: 0; padding: 0; float: left; }
 
 section article p.tel input#telephone { /*输入框*/ display: inline-block; min-width: 62%; height: 32px; background: #eeeeee; border: 1px solid #cccccc; color: #555555; font-size: 14px; line-height: 32px; margin: 0; padding: 0; float: left; }
 
-section article hgroup.address { /*收货地址*/ width: 100%; height: 170px; text-align: center; margin-top: 10px; overflow: hidden; }
+section article hgroup.address { /*收货地址*/ width: 100vw; height: 170px; text-align: center; margin-top: 10px; overflow: hidden; }
 
 section article hgroup.address span { display: inline-block; width: 20%; height: 168px; background: #eeeeee; border: 1px solid #cccccc; border-top-left-radius: 5px; border-bottom-left-radius: 5px; color: #555555; font-size: 14px; text-align: center; line-height: 166px; margin: 0; padding: 0; float: left; }
 
@@ -46,14 +46,10 @@ section article hgroup.address p input#txt { /*具体地址*/ border-bottom: non
 
 section article hgroup.address p :nth-child(1) { border-top: none; border-left: none; }
 
-section article .btn { /*提交按钮*/ width: 82.5%; height: 34px; margin-top: 20px; background: #8e488e; color: #fff; font-size: 14px; border: none; cursor: pointer; }
+section article .btn { /*提交按钮*/ width: 82.5vw; height: 34px; margin-top: 20px; background: #8e488e; color: #fff; font-size: 14px; border: none; cursor: pointer; }
 
-section footer { /*底部列表*/ position: fixed; bottom: 0; padding-top: 10px; width: 100%; height: 53px; border-top: 1px solid #cccccc; }
+section footer { /*底部列表当前高亮*/ }
 
-section footer ul { display: flex; flex: 1; margin: 0; padding: 0; color: #777777; }
+section footer .active #homeicon5 { color: #8e488e; }
 
-section footer ul li:last-child { color: #8e488e; }
-
-section footer ul li { /*底部列表每一个子元素*/ display: flex; flex: 1; flex-direction: column; font-size: 12px; text-align: center; }
-
-section footer ul li span.iconfont { /*列表子元素字体图标*/ display: block; width: 100%; height: 100%; font-size: 22px; text-align: center; }
+section footer .active .text { color: #8e488e; }

@@ -5,42 +5,42 @@
 	document.addEventListener("DOMContentLoaded",function(){
 		
 		/*头部菜单显示/隐藏*/
-		var ecaidan = document.querySelector(".headerlist");
-		var $liebiao = document.querySelector('.icon-liebiao');
-		$liebiao.onclick = function(){
-			if(ecaidan.style.opacity == 0){
-				ecaidan.style.opacity =0.9;
+		var ecaidan = $(".headerlist");
+		var $liebiao = $('.icon-liebiao');
+		$liebiao.on("singleTap",function(){
+			if(ecaidan.css("opacity") == 0){
+				ecaidan.css({"opacity":0.9});
 			}else{
-				ecaidan.style.opacity = 0;	
+				ecaidan.css({"opacity":0});	
 			}
-		}	
-
+		});	
+		
+		
+		//ajax请求数据生成地址
 		
 		
 		
-		//ajax数据请求
+		
+		//本地存储
 		//获取元素节点
-		var btn = document.querySelector(".btn"); //提交按钮
-		var username = document.querySelector("#username");  //昵称
-		var telephone = document.querySelector("#telephone"); //电话
-		var list1 = document.querySelector("#list_1"); //省
-		var list2 = document.querySelector("#list_2"); //市
-		var list3 = document.querySelector("#list_3"); //县
-		var txt = document.querySelector("#txt"); //具体地址
-		
-		
+		var btn = $(".btn"); //提交按钮
+		var username = $("#username");  //昵称
+		var telephone = $("#telephone"); //电话
+		var list1 = $("#list_1"); //省
+		var list2 = $("#list_2"); //市
+		var list3 = $("#list_3"); //县
+		var txt = $("#txt"); //具体地址
+				
 		var datalist = localStorage.getItem("datalist"); //本地取数组的数据
 		datalist = datalist ? JSON.parse(datalist) : []; //JSON解析		
 		
-		btn.onclick = function(){  //点击提交按钮
+		btn.on("singleTap",function(){  //点击提交按钮
 			
-			if (username.value != "" && telephone.value != "" &&list1.value != "" &&list2.value != "" && list3.value != "") {
-				
+			if (username.val() != "" && telephone.val() != "" &&list1.val() != "" &&list2.val() != "" && list3.val() != "") {				
 				var obj = {}; 		//设置一个空对象
-				obj.username = username.value; //昵称
-				obj.telephone = telephone.value; //电话
-				obj.address = list1.value + list2.value + list2.value + txt.value; //地址
-				
+				obj.username = username.val(); //昵称
+				obj.telephone = telephone.val(); //电话
+				obj.address = list1.val() + list2.val() + list2.val() + txt.val(); //地址				
 				datalist.push(obj); //把输入的信息存入数组
 				
 				//保存到本地数据
@@ -48,7 +48,7 @@
 			}else{
 				confirm("请输入完整信息")
 			}
-		}
-		
+		})
+	
 	});
 
