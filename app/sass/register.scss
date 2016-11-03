@@ -90,6 +90,7 @@ section{
         }
     }
     .phone{
+        position: relative;
         input:first-child{
             flex: 1;
             width: 30vw;
@@ -97,10 +98,29 @@ section{
         input:nth-child(2){
             flex: 3;
         }
+        .prompt{
+            position: absolute;
+            display: block;
+            right: 0;
+            top: 15px;
+            display: none;
+            height: 26px;
+            color:#F16E42 ;
+        }
     }
     .password{
+        position: relative;
         input{
             width: 100%;
+        }
+        .prompt1{
+            position: absolute;
+            display: block;
+            right: 0;
+            top: 15px;
+             display: none;
+            height: 26px;
+            color:#F16E42 ;
         }
     }
     .btn{
