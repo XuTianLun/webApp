@@ -44,19 +44,14 @@
  					
  				})	
 	
-	
-	
-	
-	
-	
-	
+
 //	//获取本地存储
 	var userData = localStorage.getItem('userdata');//这里得到的有可能为null
 	userData = userData ? JSON.parse(userData) : [];
 	console.log(userData);
 	var $form = $('#register');
 	var $warning = $('#warning');
-	var flag1 = false,flag2 = false,flag3= false;
+	var flag1 = false,flag2 = false,flag3= false,flag4=false;
 
 	//验证手机号
 	$('#mobile').on('blur',function(){
@@ -78,6 +73,26 @@
    		}		
 		
 	})
+	//验证验证码
+	$('#checknumber').on('blur',function(){
+		var incheck = $('#checknumber').val();
+		var getcheck = $check_number.text();
+		if(incheck!=getcheck){
+   			$warning.text('请输入正确验证码!')
+   			$warning.show();
+   			flag4 = false;
+   			return;			
+   		}else{
+   		
+   			$warning.text('')
+   			$warning.hide();
+   			flag4 = true;
+   		}	
+		
+	})
+	
+	
+	
 	//验证密码	
 	 $('#mima1').on('blur',function(){
 		var password1 = $('#mima1').val();		
@@ -114,7 +129,7 @@
 	var $btn = $('#reg_btn')
 	//点击提交
 	$btn.on('singleTap',function(){
-		if(flag1&&flag2&&flag3){
+		if(flag1&&flag2&&flag3&&flag4){
 			//条件满足创建本地存储
 			var userphone = $('#mobile').val();
 			var password =  $('#mima1').val();
