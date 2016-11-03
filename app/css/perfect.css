@@ -1,24 +1,12 @@
 @charset "UTF-8";
 /*列表页样式*/
-body, html, ul { list-style: none; width: 100vw; height: auto; margin: 0; padding: 0; }
+body, html { list-style: none; width: 100vw; height: auto; margin: 0 auto; padding: 0; }
+
+ul { list-style: none; height: auto; margin: 0; padding: 0; }
 
 section { /*头部大框架*/ height: auto; }
 
-section header { width: 100vw; height: 48px; background: #8e488e; color: #fff; line-height: 48px; position: fixed; overflow: hidden; }
-
-section header h1 { /*标题*/ display: inline-block; width: 70%; height: 48px; line-height: 48px; font-size: 17px; color: #fff; text-align: center; margin: 0; padding: 0; }
-
-section header span.icon-fanhui { /*返回按钮*/ width: 10%; height: 48px; display: inline-block; float: left; margin-left: 15px; }
-
-section header span.icon-liebiao { /*列表按钮*/ width: auto; height: auto; float: right; display: inline-block; margin-right: 20px; cursor: pointer; }
-
-section article { /*内容*/ padding-top: 10vh; width: 100vw; height: 400px; padding-left: 9%; padding-right: 10%; }
-
-section article span.headerlist { /*右侧固定菜单栏*/ position: fixed; display: block; top: 47px; right: 10px; opacity: 0; background: #666; border-radius: 5px; margin: 0; padding: 0; }
-
-section article span.headerlist a { display: block; font-weight: normal; text-decoration: none; font-size: 12px; text-align: center; width: 120px; padding: 10px 0; color: #fff; opacity: 0.9; cursor: pointer; }
-
-section article span.headerlist:before { content: ''; display: inline-block; position: absolute; right: 10px; top: -16px; width: 0; height: 0; border: 10px solid transparent; border-bottom: 8px solid #666; }
+section article { /*内容*/ padding-top: 13vh; width: 100vw; height: 400px; padding-left: 9%; padding-right: 10%; }
 
 section article p { margin: 0; padding: 0; }
 
@@ -34,19 +22,19 @@ section article p.tel span { display: inline-block; width: 20%; height: 32px; ba
 
 section article p.tel input#telephone { /*输入框*/ display: inline-block; min-width: 62%; height: 32px; background: #eeeeee; border: 1px solid #cccccc; color: #555555; font-size: 14px; line-height: 32px; margin: 0; padding: 0; float: left; }
 
-section article hgroup.address { /*收货地址*/ width: 100vw; height: 170px; text-align: center; margin-top: 10px; overflow: hidden; }
+section hgroup.address { /*收货地址*/ width: 100vw; height: 170px; text-align: center; margin-top: 10px; overflow: hidden; }
 
-section article hgroup.address span { display: inline-block; width: 20%; height: 168px; background: #eeeeee; border: 1px solid #cccccc; border-top-left-radius: 5px; border-bottom-left-radius: 5px; color: #555555; font-size: 14px; text-align: center; line-height: 166px; margin: 0; padding: 0; float: left; }
+section hgroup.address span { display: inline-block; width: 20%; height: 168px; background: #eeeeee; border: 1px solid #cccccc; border-top-left-radius: 5px; border-bottom-left-radius: 5px; color: #555555; font-size: 14px; text-align: center; line-height: 166px; margin: 0; padding: 0; float: left; }
 
-section article hgroup.address p { /*选择框*/ display: inline-flex; flex-direction: column; flex: 3; min-width: 62%; height: 168px; background: #eeeeee; border: 1px solid #cccccc; color: #555555; font-size: 14px; line-height: 32px; margin: 0; padding: 0; float: left; }
+section hgroup.address p { /*选择框*/ display: inline-flex; flex-direction: column; flex: 3; min-width: 62%; height: 168px; background: #eeeeee; border: 1px solid #cccccc; color: #555555; font-size: 14px; line-height: 32px; margin: 0; padding: 0; float: left; }
 
-section article hgroup.address p input { display: inline-flex; flex-direction: column; min-width: 62%; height: 36px; background: #eeeeee; border: 1px solid #cccccc; border-left: none; border-right: none; color: #555555; font-size: 14px; line-height: 32px; margin: 0; padding: 0 0 0 3px; float: left; }
+section hgroup.address p input { display: inline-flex; flex-direction: column; min-width: 62%; height: 36px; background: #eeeeee; border: 1px solid #cccccc; border-left: none; border-right: none; color: #555555; font-size: 14px; line-height: 32px; margin: 0; padding: 0 0 0 3px; float: left; }
 
-section article hgroup.address p input#txt { /*具体地址*/ border-bottom: none; height: 58px; }
+section hgroup.address p input#txt { /*具体地址*/ border-bottom: none; height: 58px; }
 
-section article hgroup.address p :nth-child(1) { border-top: none; border-left: none; }
+section hgroup.address p :nth-child(1) { border-top: none; border-left: none; }
 
-section article .btn { /*提交按钮*/ width: 82.5vw; height: 34px; margin-top: 20px; background: #8e488e; color: #fff; font-size: 14px; border: none; cursor: pointer; }
+section .btn { /*提交按钮*/ width: 82.5vw; height: 34px; margin-top: 20px; background: #8e488e; color: #fff; font-size: 14px; border: none; cursor: pointer; }
 
 section footer { /*底部列表当前高亮*/ }
 

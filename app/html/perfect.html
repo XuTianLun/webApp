@@ -6,23 +6,42 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 		<title>完善资料页</title>
 		<link rel="stylesheet" type="text/css" href="../css/perfect.css" />
-		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" />
-		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" /><!--字体图标-->
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/><!--公用底部-->
+		<link rel="stylesheet" type="text/css" href="../css/header_common.css"/><!--公用头部-->
 		<script src="../js/zepto/dist/zepto.js"></script>
-		<script src="../js/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/touch.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/perfect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/header_common.js" type="text/javascript" charset="utf-8"></script><!--公用头部-->
+		<script src="../js/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
 
 	</head>
 
 	<body>
-		<section>
+		
+			<!--公用头部-->
 			<header>
-				<!--头部-->
-				<span class="iconfont icon-fanhui"></span>
-				<h1>完善我的资料</h1>
-				<span class="iconfont icon-liebiao"></span>
+				<span>
+					<a class="iconfont icon-fanhui" href="javascript:history.go(-1)"></a>
+				</span>				
+				<span>完善我的资料</span>
+				<span class="liebiao">
+					<span class="iconfont icon-liebiao"></span>
+					<div class="caidan">
+					<ul>
+						<li><a href="../index.html">首页</a></li>
+						<li><a href="list.html">积分区</a></li>
+						<li><a href="list.html">夺宝区</a></li>
+						<li><a href="list.html">分类</a></li>
+						<li><a href="shoppingcart.html">购物车</a></li>
+						<li><a href="center.html">个人中心</a></li>
+					</ul>	
+				  </div>		
+				 </div>	
+			</span>				
 			</header>
+			
+		<section>
 			<article>
 
 				<!--主体表单-->
@@ -70,7 +89,7 @@
 				<footer class="footer">
 					<ul class="list">
 						<li><a href="../index.html"><i class="iconfont" id="homeicon1">&#xe61f;</i><div class="text">首页</div></a></li>
-						<li><a href="#"><i class="iconfont" id="homeicon2">&#xe654;</i><div class="text">积分</div></a></li>
+						<li><a href="list.html"><i class="iconfont" id="homeicon2">&#xe654;</i><div class="text">积分</div></a></li>
 						<li><a href="list.html"><i class="iconfont" id="homeicon3">&#xe6d0;</i><div class="text">分类</div></a></li>
 						<li><a href="shoppingcart.html"><i class="iconfont" id="homeicon4">&#xe629;</i><div class="text">购物车</div></a></li>
 						<li class="active"><a href="center.html"><i class="iconfont" id="homeicon5">&#xe65a;</i><div class="text">个人中心</div></a></li>
