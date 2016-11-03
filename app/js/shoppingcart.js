@@ -161,4 +161,32 @@ $(function() {
 		$('#buy').find('span').text(total_price);
 	}
 
-})
+
+		//点击确认支付
+		
+		var $buy_btn = $("#buy");	
+		//获取本地存储，防止被覆盖
+		var buyData = localStorage.getItem('buydata'); //这里得到的有可能为null
+		buyData = buyData ? JSON.parse(buyData) : [];
+		console.log($buy_btn);
+		$buy_btn.on('touchstart',function(){
+		var check = $goodslist.find('li').find('.check');
+		//查找被选择的项
+		for(var i = 0; i < check.length; i++) {
+
+			if(check[i].checked) {
+				var img =  $(check[i]).parent('li').find('img').attr('src');
+				var name = $(check[i]).parent('li').find('.name').text();
+				var shuliang = $(check[i]).parent('li').find('.shuliang').val();
+				var price = $(check[i]).parent('li').find('.price').html();				
+				buyData.push({name:name,shuliang:shuliang,price:price,img:img});
+
+			}
+			//设置本地存储
+		localStorage.setItem('buydata', JSON.stringify(buyData));
+			
+		}
+
+		})
+		
+});
