@@ -82,7 +82,6 @@
 	 })
 
 	var $succeed = $('#succeed');
-	$succeed.hide();
 	var $btn = $('#reg_btn')
 	//点击提交
 	$btn.on('singleTap',function(){
@@ -95,7 +94,8 @@
    		localStorage.setItem('userdata',JSON.stringify(userData));
 		//注册成功页面弹出
 		$succeed.show();
-		}	 
+		}	
+	
 	})
 	//关闭注册成功页面
 	$('#close').on('singleTap',function(){
