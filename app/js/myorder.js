@@ -1,6 +1,6 @@
 (function(){
 	document.addEventListener('DOMContentLoaded',function(){
-		
+		console.log(localStorage.getItem('buydata'));		
 	
 	var $order_details = $('.order_details');
 	//本地存储

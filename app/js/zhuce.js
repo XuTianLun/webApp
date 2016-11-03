@@ -21,16 +21,6 @@
 		
 	})
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 //	//获取本地存储
 	var userData = localStorage.getItem('userdata');//这里得到的有可能为null
 	userData = userData ? JSON.parse(userData) : [];
