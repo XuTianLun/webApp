@@ -3,7 +3,7 @@ window.onload = function(){
 	//轮播图
 	var mySwiper = new Swiper('.swiper-container', {
 		autoplay: 2000,//可选选项，自动滑动
-		loop:true,
+		loop:true, //循环（无缝轮播）
 		pagination : '.swiper-pagination',
 	});
 	
@@ -17,7 +17,7 @@ window.onload = function(){
 			async:true,
 			url:'json/datalist1.json',
 			success:function(res){
-				console.log(res);
+//				console.log(res);
 
 				// 生成一个ul
 				$.each(res,function(idx,item){
@@ -41,7 +41,7 @@ window.onload = function(){
 			async:true,
 			url:'json/datalist2.json',
 			success:function(res){
-				console.log(res);
+//				console.log(res);
 
 				// 生成一个ul
 				$.each(res,function(idx,item){
@@ -68,7 +68,7 @@ window.onload = function(){
 			async:true,
 			url:'json/datalist3.json',
 			success:function(res){
-				console.log(res);
+//				console.log(res);
 			
 				// 生成一个ul
 				$.each(res,function(idx,item){
@@ -77,7 +77,7 @@ window.onload = function(){
 					$('<p/>').addClass('title').html(item.title).appendTo($li);
 					$('<p/>').addClass('price').html( '<span>&yen;' + item.price).appendTo($li);
 					$li.appendTo($ul3);
-						console.log(item.imgurl)
+//						console.log(item.imgurl)
 				});
 				
 				$datalist3.append($ul3);
@@ -97,9 +97,12 @@ window.onload = function(){
 				$(".comeback").fadeOut();
 			}
 		});
+
+		
 		$('.comeback').on('click',function(){
 			$('html body').animate({scrollTop:0});
 		});
+
 	});
 	
 		
