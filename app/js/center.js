@@ -1,9 +1,7 @@
 (function(){
 	document.addEventListener('DOMContentLoaded',function(){
-		
+		//头部列表菜单
 		var $liebiao = $('.liebiao');
-		
-			//列表菜单
 		$liebiao.on('singleTap',function(){
 			if($(this).find('.caidan').css("display") == "none"){
 			$(this).parent().find('.caidan').css({"display":"block"});
@@ -12,10 +10,11 @@
 			}
 		});
 		
+		
 		//获取完善资料页的号码   显示到个人中心
 		var getdatalist = localStorage.getItem("datalist");
 		getdatalist =getdatalist ? JSON.parse(getdatalist) : [];
-		console.log(getdatalist);
+//		console.log(getdatalist);
 		var myTel = $('#mytel')
 		$.each(getdatalist, function(idx,item){
 			myTel.html(item.telephone)
