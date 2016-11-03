@@ -1,23 +1,25 @@
 ;
 $(function() {
 
-	//点击列表图标导航出现
 	var $doc = $(document);
-	var $nav = $('#navLsit');
-	var $navBtn = $nav.find("span");
-	var $nav_list = $nav.find(".list_box");
-	$navBtn.on('singleTap', function() {
+	var $navbtn = $('#nav_btn');
+	var $navlist = $('#nav_list');
+	//导航列表点击显示隐藏
+	$navbtn.on('singleTap', function() {
+		if($navlist.css('display') == 'none') {
+			$navlist.show();
+		} else {
+			$navlist.hide();
+		}
 
-			$nav_list.show();
-		})
-		//点击任意位置隐藏
-	$doc.on('doubleTap', function() {
-
-			$nav_list.hide();
+	})
+	$doc.on('singleTap', 'section', function() {
+			if($navlist.css('display') == 'block') {
+				$navlist.hide();
+			};
 
 		})
 		//加载商品
-
 	var goodsData = localStorage.getItem('goodsdata'); //这里得到的有可能为null
 	goodsData = goodsData ? JSON.parse(goodsData) : [];
 	//  创建匿名函数
