@@ -3,20 +3,7 @@
 /*本地存储localStorage*/
 
 	document.addEventListener("DOMContentLoaded",function(){
-		
-		/*头部菜单显示/隐藏*/
-		var ecaidan = $(".headerlist");
-		var $liebiao = $('.icon-liebiao');
-		$liebiao.on("singleTap",function(){
-			if(ecaidan.css("opacity") == 0){
-				ecaidan.css({"opacity":0.9});
-			}else{
-				ecaidan.css({"opacity":0});	
-			}
-		});	
-		
-		
-		
+							
 		//ajax请求数据生成地址
 		//获取三个datalist元素节点
 		var $province = $("#province");  //省
@@ -24,42 +11,51 @@
 		var $county = $("#county");  //区
 
 		
-		$.ajax({
-			url:"../json/address.json",
-			success : function(res){
-				
-				$.each(res, function(idx,item) {
-					
-						//创建一个option
-						//省
-						var $option = $("<option/>");
-						$option.attr({"value":item.name,"label":item.name}).text(item.name); //省
-						$option.appendTo($province);
-		
-						
-						//市
-						var value1 = $("#list_1");
-						
-						value1.on("blur",function(){
-							console.log(value1.val());
-							
-						});
-						
-						
-						var city = item.cities; //取到json里面的城市
-						$.each(city, function(idx,item) {
-						var $option2 = $("<option/>");
-						$option2.attr({"value":item.name,"label":item.name}).text(item); 
-						$option2.appendTo($city);
-						
-						
-						
-					});
+//		$.ajax({
+//			url:"../json/address.json",
+//			success : function(res){				
+//				$.each(res, function(idx,item) {
+//					
+//						//创建一个option
+//						//省
+//						var $option = $("<option/>");
+//						$option.attr({"value":item.name,"label":item.name}).text(item.name); //省
+//						$option.appendTo($province);
+//						
+//						var city = item.cities; //取到json里面的城市
+//						$.each(city, function(idx,item) {
+//						var $option2 = $("<option/>");
+//						$option2.attr({"value":item.name,"label":item.name}).text(item); 
+//						$option2.appendTo($city);	
+//					});
+//				});				
+//			}
+//		});
 
-				});
-				
-			}
-		});
+		//封装函数
+		//两次遍历
+		function ajax() {
+			$.ajax({
+				url: "../json/address.json", //请求数据
+				success: function(res) {
+					$.each(res, function(idx, item) { //第一次遍历
+						if($("#list_1").val() == item.name) { //省
+							$(".city").find("option").remove();  //先移除上一个的数据存留
+						} else {
+							$("<option/>").text(item.name).appendTo($(".province")); //省
+						}
+						$.each(item.cities, function(idx, item) {
+							$("<option/>").text(item).appendTo($(".city"));  //市
+						});
+					});
+				}
+			});
+		}
+		ajax();
+		$("#list_1").on("change", function() { //当省输入框里面的值改变的时候
+			ajax();
+		})		
+		
 		
 		
 
