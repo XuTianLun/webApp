@@ -155,7 +155,7 @@ section {
     padding: 3vw;
     label {
         width: 100%;
-        height: 4vh;
+        height: 5vh;
         display: flex;
         border: 0.1em solid darkgray;
         border-radius: 6px;
@@ -167,30 +167,35 @@ section {
     label.phone {
         span {
             text-align: left;
-            line-height: 4vh;
+            line-height: 5vh;
             color: darkgray;
             display: inline-block;
             flex: 2;
             font-size: 1em;
         }
         input {
-            border-left: 0.5vw solid darkgray;
+           
             flex: 5;
         }
     }
     label.checknumber {
         span {
-            flex: 4;
+            flex: 3;
             text-align: center;
-            line-height: 4vh;
-            font-size: 2vh;
-            background: #8e488e;
+            line-height: 5vh;
+            font-size: 1em;
             -moz-border-radius-topright: 6px;
             font-weight: 600;
-            color: white;
+  
         }
+        span.get{background: #8e488e; color: white;}
+        span.checknum{
+            background: darkgray;
+            
+        }
+        
         input {
-            flex: 6;
+            flex: 5;
         }
     }
     label.password{
@@ -202,7 +207,7 @@ section {
         font-size: 1em;
         border: none;
         width: 100%;
-        height: 4vh;
+        height: 5vh;
         text-align: center;
         border: 1vw solid #8e488e;
         background: #8e488e;

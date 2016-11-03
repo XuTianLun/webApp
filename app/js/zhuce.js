@@ -21,6 +21,35 @@
 		
 	})
 	
+	//设置验证码
+	var $check_number = $('#checknum');
+	var $getchecknumber = $('#get');
+		//创建一新子符串
+		var num =String();
+		//页面刷新，显示一组随机验证码
+ 		for(var i=0;i<4;i++){
+ 			num=num+parseInt(Math.random()*10);
+ 		}
+ 		//赋值
+ 		$check_number.text(num);
+ 		//点击验证码，跟换一组新的验证码
+ 		$getchecknumber.on('singleTap',function(){
+ 		num="";
+ 		$check_number.text("");
+ 		for(var i=0;i<4;i++){
+ 		num=num+parseInt(Math.random()*10);
+ 					
+ 		}
+ 		$check_number.text(num); 
+ 					
+ 				})	
+	
+	
+	
+	
+	
+	
+	
 //	//获取本地存储
 	var userData = localStorage.getItem('userdata');//这里得到的有可能为null
 	userData = userData ? JSON.parse(userData) : [];
