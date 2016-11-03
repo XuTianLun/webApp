@@ -36,22 +36,14 @@ $(function() {
 			$btn_a.removeClass();
 			$(this).addClass('atver');
 			var index = $(this).index();
-			$section.css('marginLeft', '-' + index * 100 + 'vw')
+			$section.css('marginLeft', '-' + index * 100 + 'vw');
+			console.log($section.scrollTop());
 		})
-		//点击列表图标导航出现
-	var $nav = $('#navLsit');
-	var $navBtn = $nav.find("span");
-	var $nav_list = $nav.find(".list_box");
-	$navBtn.on('singleTap', function() {
+		$section.scroll(function(){
+			
+	
+		});
 
-			$nav_list.show();
-		})
-		//点击任意位置隐藏
-	$doc.on('doubleTap', function() {
-
-			$nav_list.hide();
-
-		})
 		//删除本地存储
 		//		localStorage.clear();
 		//点击加入购物车
@@ -64,7 +56,6 @@ $(function() {
 
 	$shoppingcart_btn.on('singleTap', function() {
 		//获取商品名字
-		console.log(123)
 		var name = $("#goods_name").text();
 		//获取商品价格
 		var price = $("#price").text();
