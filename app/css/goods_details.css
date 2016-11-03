@@ -34,15 +34,15 @@ section { margin-top: 8vh; width: 200vw; overflow: hidden; padding: 0; transitio
 
 .goods_information { padding: 2vw; }
 
-.goods_information .goods_name { color: #333333; font-size: 2vh; }
+.goods_information .goods_name { color: #333333; font-size: 1em; }
 
-.goods_information .price { font-size: 16px; color: red; width: 100vw; padding-bottom: 10px; border-bottom: 10px solid darkgray; margin-left: -2vw; padding: 2vw; }
+.goods_information .price { font-size: 1em; color: red; width: 100vw; padding-bottom: 10px; border-bottom: 10px solid darkgray; margin-left: -2vw; padding: 2vw; }
 
-.goods_information .information_list li { padding: 1vh 0; line-height: 3vh; font-size: 2vh; }
+.goods_information .information_list li { padding: 1vh 0; line-height: 3vh; font-size: 1em; }
 
-.goods_information .information_list li span { color: gray; font-size: 1vh; }
+.goods_information .information_list li span { color: gray; font-size: 1em; }
 
-.goods_information img { display: block; width: 100vw; margin-left: -2vw; }
+.goods_information img { display: block; width: 100%; margin-left: -2vw; }
 
 .goods_remark { float: left; margin: 0; padding: 0; background: gainsboro; width: 100vw; }
 

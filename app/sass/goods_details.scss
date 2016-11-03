@@ -61,34 +61,16 @@ header{
      }
 }
 
-
-
-//.header nav{position: relative;float:right;width: 10vw;height: 7vh;}
-//.header nav .list_box{position: absolute; width: 20vw;z-index: 10;top: 7vh;right: 5vw;background: #000000;opacity: 0.6;border-radius:5px;display: none;}
-//.header nav .list_box::before{
-//  content: "";
-//  height: 0;
-//  width: 0;
-//  opacity: 0.6;
-//  position: absolute;
-//  top: -20px;
-//  right: 10px;
-//  border:10px solid transparent;
-//  border-bottom: 10px solid #000000;
-//}
-//.header nav .nav_list li{padding: 5px;margin-bottom: 5px;border-bottom: 1px solid gray;text-align: center;}
-//.header nav .nav_list li:last-child{border: none;}
-//.header nav .nav_list li a{text-decoration: none;color: darkgray;font-weight: 600;font-size: 14px;}
 section{margin-top: 8vh;width: 200vw;overflow: hidden;padding: 0;transition: all 0.5s;}
 .xiangqing{width: 100vw;float: left;}
 .swiper-wrapper .swiper-slide{text-align: center;}
 .goods_information{padding: 2vw;}
-.goods_information .goods_name{color: #333333;font-size: 2vh;}
-.goods_information .price{font-size: 16px;color: red;width: 100vw;padding-bottom: 10px;border-bottom: 10px solid darkgray;margin-left: -2vw;padding: 2vw;}
+.goods_information .goods_name{color: #333333;font-size: 1em;}
+.goods_information .price{font-size: 1em;color: red;width: 100vw;padding-bottom: 10px;border-bottom: 10px solid darkgray;margin-left: -2vw;padding: 2vw;}
 
-.goods_information .information_list li{padding: 1vh 0;line-height: 3vh;font-size: 2vh;}
-.goods_information .information_list li span{color: gray;font-size: 1vh;}
-.goods_information img{display: block; width: 100vw;margin-left: -2vw;}
+.goods_information .information_list li{padding: 1vh 0;line-height: 3vh;font-size: 1em;}
+.goods_information .information_list li span{color: gray;font-size: 1em;}
+.goods_information img{display: block; width: 100% ;margin-left: -2vw;}
 
 .goods_remark{float: left; margin: 0;padding: 0;background: rgb(220,220,220);width: 100vw;}
 .goods_remark .remark_list{width: 100vw;}

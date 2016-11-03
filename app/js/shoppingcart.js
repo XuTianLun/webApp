@@ -176,7 +176,7 @@ $(function() {
 
 			if(check[i].checked) {
 				var img =  $(check[i]).parent('li').find('img').attr('src');
-				var name = $(check[i]).parent('li').find('.name').val();
+				var name = $(check[i]).parent('li').find('.name').text();
 				var shuliang = $(check[i]).parent('li').find('.shuliang').val();
 				var price = $(check[i]).parent('li').find('.price').html();				
 				buyData.push({name:name,shuliang:shuliang,price:price,img:img});
