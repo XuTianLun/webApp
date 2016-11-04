@@ -1,4 +1,4 @@
-(function(){
+;(function(){
 	document.addEventListener('DOMContentLoaded',function(){
 		//头部列表菜单
 		var $liebiao = $('.liebiao');
@@ -11,14 +11,17 @@
 		});
 		
 		
-		//获取完善资料页的号码   显示到个人中心
-		var getdatalist = localStorage.getItem("datalist");
-		getdatalist =getdatalist ? JSON.parse(getdatalist) : [];
-//		console.log(getdatalist);
+		//获取注册登录的号码   显示到个人中心
+		var getregister = localStorage.getItem("userdata");
+		getregister =getregister ? JSON.parse(getregister) : [];
 		var myTel = $('#mytel')
-		$.each(getdatalist, function(idx,item){
-			myTel.html(item.telephone)
+		$.each(getregister, function(idx,item){
+			myTel.html(item.userphone);
+			console.log(item.userphone);
 		});
+
+
+
 		
 		//点击箭头跳到完善资料页
 		$('.jiantou .badge').on('click',function(){

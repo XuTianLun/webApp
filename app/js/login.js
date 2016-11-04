@@ -1,15 +1,21 @@
 ;(function(){
 	document.addEventListener('DOMContentLoaded',function(){
 		
+		var arr =[false,false];
 		//获取本地存储
-		var register = localStorage.getItem('register');
-		register = register ? JSON.parse(register) : [];
-		if(register.length>0){
-		 $('#phone').val(register.usename);
-		 $('#password').val(register.passWord);
+		var userData = localStorage.getItem('userdata');
+		userData = userData ? JSON.parse(userData) : [];
+		console.log(userData);
+		if(userData.length>0){
+			
+		 $('#phone').val(userData[0].userphone);
+		 $('#password').val(userData[0].password);
+		 arr[0] = true;
+		 arr[1] = true;
+		 console.log(arr);
 		}
 		 //验证手机号码
-		  var arr =[false,false];
+		  
 
 		    $('#phone').blur(function(){
 		    	var num = $(this).val();
@@ -32,17 +38,26 @@
 				}
 			})
 		$('form').submit(function(){
-			if(arr[0] == true && arr[1] == true){
-				console.log(11);
+			var istrue = true;
+			for(var i = 0;i<arr.length;i++){
+				if(arr[i] == false){
+					istrue = false;
+				}
+			}
+			console.log(arr);
+			if(istrue){
 				var useName = $('#phone').val();
 				var pwd = $('#password').val();
+				console.log(useName);
+				console.log(pwd);
 				var register = [];
 				var registermessage = {
-					usename:useName,
-					passWord:pwd
+					userphone:useName,
+					password:pwd
 				}
-				goods.push(registermessage);
-				localStorage.setItem('register',JSON.stringify(register));
+				register.push(registermessage);
+				localStorage.setItem('userdata',JSON.stringify(register));
+				
 			}else{
 				if(arr[0] == false){
 					$('.prompt').css({'display':'block'}).html("请正确填写手机号码哦");

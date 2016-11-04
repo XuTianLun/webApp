@@ -20,7 +20,7 @@
 				var $div = $('<div/>');
 				$div.html('<span>'+item.type+'</span>'+'<span>'+item.balance+'</span>'+'<span>'+item.note+'</span>'+'<span>'+item.time+'</span>');
 				$edetails.append($div);
-			}
+			};
 			});
 			
 		}
@@ -44,7 +44,7 @@
 						async:true,
 						success: function(res){
 							var $edetails = $('.details');
-							$.each(res, function(idx,item) {
+							$.each(res, function(idx,item){
 								if(i < 5){
 									if(item.num == 2){
 										add();
@@ -64,7 +64,7 @@
 								var $div = $('<div/>');
 								$div.html('<span>'+item.type+'</span>'+'<span>'+item.balance+'</span>'+'<span>'+item.note+'</span>'+'<span>'+item.time+'</span>');
 								$edetails.append($div);
-							}
+							};
 							});
 							
 						}
@@ -73,5 +73,5 @@
 									
 				}
 	});
-})
+});
 })();

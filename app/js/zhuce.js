@@ -127,6 +127,7 @@
 	var userData = localStorage.getItem('userdata');//这里得到的有可能为null
 	userData = userData ? JSON.parse(userData) : [];	
 	$btn.on('singleTap',function(){
+		console.log(flag1,flag2,flag3,flag4);
 		if(flag1&&flag2&&flag3&&flag4){
 			//条件满足创建本地存储
 			var userphone = $('#mobile').val();

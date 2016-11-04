@@ -75,6 +75,9 @@ body{
                 span:first-child{
                    margin-bottom: 30px;
                 }
+                span:last-child{
+                    color: orangered;
+                }
             }
             span{
                 flex: 1;
@@ -96,7 +99,6 @@ body{
              border-bottom: 1px solid #ddd;
             span{
                 color: orangered;
-              
                 margin-right: 10px;
                 margin-left: 10px;
             }
