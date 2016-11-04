@@ -13,15 +13,31 @@ gulp.task('buildSass',function(){
 	//查找sass文件
 	return gulp.src('./app/sass/*.scss')
 	//输出未压缩版本
-	.pipe(sass({outputStyle:'compact'}))
-	.pipe(gulp.dest('./app/css'))
-	//把文档流输入出到gulp-sass进行编辑
-	//压缩文件并改名
-	.pipe(sass({outputStyle:'compressed'}))
-	.pipe(rename({suffix:'.min'}))
-	//输出文件
-	.pipe(gulp.dest('./app/css'))
+//	.pipe(sass({outputStyle:'compact'}))
+//	.pipe(gulp.dest('./app/css'))
+//	//把文档流输入出到gulp-sass进行编辑
+//	//压缩文件并改名
+//	.pipe(sass({outputStyle:'compressed'}))
+//	.pipe(rename({suffix:'.min'}))
+//	//输出文件
+//	.pipe(gulp.dest('./app/css'))
 	
+	.pipe(sass({outputStyle:'compact'}))
+		
+		.pipe(gulp.dest('./app/css'))
+	
+		.pipe(sass({outputStyle:'compressed'}))
+		
+		.pipe(rename({suffix:'.min'}))
+		
+		.pipe(gulp.dest('./dist/css'))
+		
+		.pipe(concat('all.css'))
+		
+		.pipe(gulp.dest('./dist/css'))
+		
+		.pipe(browserSync.reload({stream:true}))
+
 		// 输出文件后可以确定css完成编译
 		// 刷新操作一定要在编译完成后进行
 		.pipe(browserSync.reload({stream:true}));
