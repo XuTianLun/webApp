@@ -26,9 +26,7 @@ header .navLsit .caidan ul li a { display: block; font-weight: normal; text-deco
 
 header .navLsit .caidan ul:before { content: ''; display: inline-block; position: absolute; right: 5px; top: -16px; width: 0; height: 0; border: 10px solid transparent; border-bottom: 8px solid #666; }
 
-section { margin-top: 8vh; width: 200vw; overflow: hidden; padding: 0; transition: all 0.5s; }
-
-.xiangqing { width: 100vw; float: left; }
+.xiangqing { width: 100vw; float: left; overflow: hidden; }
 
 .swiper-wrapper .swiper-slide { text-align: center; }
 

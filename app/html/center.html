@@ -24,39 +24,7 @@
 	</head>
 	<body>
 		<div data-role="page" id="pageMine">
-			<!--<div data-role="panel" id="myPanel" style="background:#101010;opacity: 0.5;color: #fff;"> 
-			   	<h2>确定忍心离开？</h2>
-			   	<p>您还可以进行如下操作</p>
-			    <ul class="list-group">
-				  	<li class="list-group-item list-group-item-success"><a data-ajax="false" href="../index.html">首页</a></li>
-				  	<li class="list-group-item list-group-item-info"><a data-ajax="false" href="list.html">分类</a></li>
-				  	<li class="list-group-item list-group-item-warning"><a data-ajax="false" href="shoppingcart.html">购物车</a></li>
-				  	<li class="list-group-item list-group-item-danger"><a data-ajax="false" href="#">积分</a></li>
-				</ul>
-		  	</div> -->
-		  		<!--头部-->
-		  		<!--<header data-role="header" class="header">
-			  		<a data-ajax="false" href="javascript:history.go(-1)" class="iconfont icon-fanhui" style="margin-top: -2vh;">
-			  			<i class="iconfont" style="color: #fff;">&#xf007a;</i>
-			  		</a>
-			    	<h1>个人中心</h1>
-			    	<a data-ajax="false" href="#" style="margin-top: -2vh;">
-			    		<i class="iconfont" style="color: #fff;">&#xe605;</i>
-			    		<div class="caidan">
-							<ul>
-								<li><a href="../index.html">首页</a></li>
-								<li><a>积分区</a></li>
-								<li><a>夺宝区</a></li>
-								<li><a>分类</a></li>
-								<li><a>购物车</a></li>
-								<li><a>个人中心</a></li>
-							</ul>
-					    </div>
-			    	</a>
-			  	</header>
-		  	-->
-		  	
-		  		<header>
+		<header>
 			<a class="iconfont icon-fanhui" href="javascript:history.go(-1)">
 				
 			</a>
@@ -79,130 +47,126 @@
 			
 		</header>
 		  		
-		  		
-		  		
-		  	
-		  		
-				<section data-role="content">
-			    	<div class="photo">
-			    		<ul class="list-group photo_list1">
-			    			<li>
-			    				<div class="row">
-			    					<div class="col-xs-3">
-			    						<div class="people_pic">
-				    						<img src="../img/18.jpg" />
-				    					</div>
-			    					</div>
-			    					<div class="col-xs-7">
-			    						<div class="VIP">
-					    					<p id="mytel">138001383000</p>
-					    					<div class="small_pic">
-					    						<img src="../img/18.jpg" />
-					    						<span>普通会员</span>
-					    					</div>
-					    				</div>
-			    					</div>
-			    					<div class="col-xs-2">
-			    						<div class="jiantou">
-			    							<span class="badge" style="background:rgb(255,255,255,0.1) ;">&gt;</span>
-			    						</div>
+		<section data-role="content">
+	    	<div class="photo">
+	    		<ul class="list-group photo_list1">
+	    			<li>
+	    				<div class="row">
+	    					<div class="col-xs-3">
+	    						<div class="people_pic">
+		    						<img src="../img/18.jpg" />
+		    					</div>
+	    					</div>
+	    					<div class="col-xs-7">
+	    						<div class="VIP">
+			    					<p id="mytel"><a data-ajax="false" href="login.html">登录</a>&nbsp;&nbsp;<a data-ajax="false" href="zhuce.html">注册</a></p>
+			    					<div class="small_pic">
+			    						<img src="../img/18.jpg" />
+			    						<span>普通会员</span>
 			    					</div>
 			    				</div>
-			    			</li>
-			    		</ul>
-			    	</div>
-			    		
-			    	<!--金额	-->
-			    	<div class="money">
-			    		<div class="row">
-			    			<div class="col-xs-4">
-			    				<a data-ajax="false" href="myvault.html">
-				    				<p>100</p>
-				    				<p>我的金额</p>
-				    			</a>
-			    			</div>
-			    			<div class="col-xs-4">
-			    				<a data-ajax="false" href="#">
-				    				<p>50</p>
-				    				<p>可用金额</p>
-				    			</a>
-			    			</div>
-			    			<div class="col-xs-4">
-			    				<a data-ajax="false" href="#">
-				    				<p>1000</p>
-				    				<p>代币</p>
-			    				</a>
-			    			</div>
-			    		</div>
-			    	</div>
-			    	<!--会员等级-->
-			    	<div class="vipgrade">
-			    		<div class="row">
-			    			<div class="col-xs-12">
-			    				<div class="list-group" id="vipgrade">
-								  	<a data-ajax="false" href="#" class="list-group-item">
-								  		<i class="iconfont" style="color: deeppink;">&#xe608;</i>
-								  		一级会员
-								  		<span class="badge">5</span>
-								  	</a>
-								  	<a data-ajax="false" href="#" class="list-group-item">
-								  		<i class="iconfont" style="color:#4fc6ee;">&#xe636;</i>
-								  		二级会员
-								  		<span class="badge">5</span>
-								  	</a>
-								  	<a data-ajax="false" href="#" class="list-group-item">
-								  		<i class="iconfont" style="color:#ffa64c;">&#xe657;</i>
-								  		三级会员
-								  		<span class="badge">5</span>
-								  	</a>
-								</div>
-			    			</div>
-			    		</div>
-			    		
-			    	</div>	 
-			  		<!--订单、升级为商家、完善资料-->
-			  		<div class="myindent">
-			  			<div class="list-group" id="myindent">
-			  				<!--我的订单-->
-						  	<a data-ajax="false" href="myorder.html" class="list-group-item">
-						    	<i class="iconfont" style="color: deeppink;">&#xe607;</i>
-						    	我的订单
-						    	<span class="badge">&gt;</span>
-						  	</a>
-						  	<!--升级为商家-->
+	    					</div>
+	    					<div class="col-xs-2">
+	    						<div class="jiantou">
+	    							<span class="badge" style="background:rgb(255,255,255,0.1) ;">&gt;</span>
+	    						</div>
+	    					</div>
+	    				</div>
+	    			</li>
+	    		</ul>
+	    	</div>
+	    		
+	    	<!--金额	-->
+	    	<div class="money">
+	    		<div class="row">
+	    			<div class="col-xs-4">
+	    				<a data-ajax="false" href="myvault.html">
+		    				<p>100</p>
+		    				<p>我的金额</p>
+		    			</a>
+	    			</div>
+	    			<div class="col-xs-4">
+	    				<a data-ajax="false" href="#">
+		    				<p>50</p>
+		    				<p>可用金额</p>
+		    			</a>
+	    			</div>
+	    			<div class="col-xs-4">
+	    				<a data-ajax="false" href="#">
+		    				<p>1000</p>
+		    				<p>代币</p>
+	    				</a>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<!--会员等级-->
+	    	<div class="vipgrade">
+	    		<div class="row">
+	    			<div class="col-xs-12">
+	    				<div class="list-group" id="vipgrade">
 						  	<a data-ajax="false" href="#" class="list-group-item">
-						  		<i class="iconfont" style="color:#4fc6ee">&#xe609;</i>
-						  		升级为商家
-						    	<span class="badge">&gt;</span>
+						  		<i class="iconfont" style="color: deeppink;">&#xe608;</i>
+						  		一级会员
+						  		<span class="badge">5</span>
 						  	</a>
-						  	<!--完善资料-->
-						  	<a data-ajax="false" href="perfect.html" class="list-group-item">
-						  		<i class="iconfont" style="color:#ffa64c">&#xe66b;</i>
-						  		完善资料
-						    	<span class="badge">&gt;</span>
+						  	<a data-ajax="false" href="#" class="list-group-item">
+						  		<i class="iconfont" style="color:#4fc6ee;">&#xe636;</i>
+						  		二级会员
+						  		<span class="badge">5</span>
+						  	</a>
+						  	<a data-ajax="false" href="#" class="list-group-item">
+						  		<i class="iconfont" style="color:#ffa64c;">&#xe657;</i>
+						  		三级会员
+						  		<span class="badge">5</span>
 						  	</a>
 						</div>
-			  		</div>
-			  	</section>
+	    			</div>
+	    		</div>
+	    		
+	    	</div>	 
+	  		<!--订单、升级为商家、完善资料-->
+	  		<div class="myindent">
+	  			<div class="list-group" id="myindent">
+	  				<!--我的订单-->
+				  	<a data-ajax="false" href="myorder.html" class="list-group-item">
+				    	<i class="iconfont" style="color: deeppink;">&#xe607;</i>
+				    	我的订单
+				    	<span class="badge">&gt;</span>
+				  	</a>
+				  	<!--升级为商家-->
+				  	<a data-ajax="false" href="#" class="list-group-item">
+				  		<i class="iconfont" style="color:#4fc6ee">&#xe609;</i>
+				  		升级为商家
+				    	<span class="badge">&gt;</span>
+				  	</a>
+				  	<!--完善资料-->
+				  	<a data-ajax="false" href="perfect.html" class="list-group-item">
+				  		<i class="iconfont" style="color:#ffa64c">&#xe66b;</i>
+				  		完善资料
+				    	<span class="badge">&gt;</span>
+				  	</a>
+				</div>
+	  		</div>
+	  	</section>
 			
-			<!--页面底部-->
-		  	<footer data-role="footer" class="footer" style="border-top: 0;">
-		    	<ul class="list">
-		    		<li><a data-ajax="false" href="../index.html"><i class="iconfont" id="homeicon1">&#xe61f;</i><div class="text">首页</div></a></li>
-					<li><a data-ajax="false" href="list.html"><i class="iconfont" id="homeicon2">&#xe654;</i><div class="text">积分</div></a></li>
-					<li><a data-ajax="false" href="list.html"><i class="iconfont" id="homeicon3">&#xe6d0;</i><div class="text">分类</div></a></li>
-					<li><a data-ajax="false" href="shoppingcart.html"><i class="iconfont" id="homeicon4">&#xe629;</i><div class="text">购物车</div></a></li>
-					<li><a data-ajax="false" href="center.html"><i class="iconfont" id="homeicon5">&#xe65a;</i><div class="text" style="color: #8e488e;">个人中心</div></a></li>
-		    	</ul>
-		  	</footer>
-		  	
-		  	<script>
-		  		//底部高亮效果
-				$(function(){
-					$("#homeicon5").css({"color":"#8e488e"});
-			
-				});
-		  	</script>
+		<!--页面底部-->
+	  	<footer data-role="footer" class="footer" style="border-top: 0;">
+	    	<ul class="list">
+	    		<li><a data-ajax="false" href="../index.html"><i class="iconfont" id="homeicon1">&#xe61f;</i><div class="text">首页</div></a></li>
+				<li><a data-ajax="false" href="list.html"><i class="iconfont" id="homeicon2">&#xe654;</i><div class="text">积分</div></a></li>
+				<li><a data-ajax="false" href="list.html"><i class="iconfont" id="homeicon3">&#xe6d0;</i><div class="text">分类</div></a></li>
+				<li><a data-ajax="false" href="shoppingcart.html"><i class="iconfont" id="homeicon4">&#xe629;</i><div class="text">购物车</div></a></li>
+				<li><a data-ajax="false" href="center.html"><i class="iconfont" id="homeicon5">&#xe65a;</i><div class="text" style="color: #8e488e;">个人中心</div></a></li>
+	    	</ul>
+	  	</footer>
+	  	
+	  	<script>
+	  		//底部高亮效果
+			$(function(){
+				$("#homeicon5").css({"color":"#8e488e"});
+		
+			});
+	  	</script>
 		  	
 		</div> 
 	</body>

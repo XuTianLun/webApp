@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/goods_details.min.css" />
 		<script type="text/javascript" src="../js/zepto/dist/zepto.min.js"></script>
 		<script src="../js/zepto/src/touch.js"></script>
+		<script src="../js/swiper/dist/js/swiper.min.js"></script>
 		<script src="../js/swiper/dist/js/swiper.jquery.min.js"></script>
 		<script type="text/javascript" src="../js/goods_details.js"></script>
 	</head>
@@ -19,8 +20,8 @@
 			<a href="javascript:history.go(-1)" class="iconfont icon-fanhui"></a>
 			
 			<div class="btn" id="btn" >
-				<a class="atver" href="#">详情</a>
-				<a href="#">评论</a>
+				<a class="atver" href="#" >详情</a>
+				<a href="#" >评论</a>
 			</div>
 			
 			<nav id="navLsit" class="navLsit" >
@@ -38,19 +39,20 @@
 				
 			</nav>
 		</header>
-		<section id="details_content" >
+<div class="swiper-container" style="margin-top: 7vh;margin-bottom: 8vh;" >
+	<div class="swiper-wrapper">
+		<div class="swiper-slide" data-hash="slide1">
 			<div class="xiangqing">
-
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
+				<div class="swiper-container1">
+					<div class="swiper-wrapper"" >
 						<div id="goods_img" class="swiper-slide"><img src="../img/56.jpg" /></div>
 						<div class="swiper-slide"><img src="../img/57.jpg" /></div>
 						<div class="swiper-slide"><img src="../img/58.jpg" /></div>
 					</div>
 					<!-- 如果需要分页器 -->
-					<div class="swiper-pagination"></div>
+					<div class="swiper-pagination" style="position: absolute;top: 40vh;left: 0" ></div>
 				</div>
-				<div class="goods_information">
+				<div class="goods_information" style="text-align: left;" >
 					<p id="goods_name" class="goods_name">斯文印花黑灰色短袖连衣裙</p>
 					<p  class="price">￥<span id="price">120</span></p>
 					<div class="information_list">
@@ -63,8 +65,15 @@
 					<img src="../img/60.jpg" />
 				</div>
 
-			</div>
-			<div class="goods_remark">
+			</div>			
+		
+		
+		
+		
+		
+		</div>
+		<div class="swiper-slide" data-hash="slide1">
+			<div class="goods_remark" style="text-align: left;z-index: 100;" >
 				<ul class="remark_list">
 					<li>
 						<p class="remark_header">
@@ -119,7 +128,11 @@
 				</ul>
 
 			</div>
-		</section>
+		
+		
+		</div>
+	</div>
+</div>		
 		<footer class="footer">
         <a href="shoppingcart.html" class="iconfont icon-cart" ><span id="goods_num" ></span></a>
         <a href="#" class="s_cart" id="s_cart" >加入购物车</a>
