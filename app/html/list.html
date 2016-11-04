@@ -4,16 +4,15 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>列表页分类</title>
-		<link rel="stylesheet" type="text/css" href="../css/list.css"/>		
+		<link rel="stylesheet" type="text/css" href="../css/list.css"/>	<!--list-css-->	
 		<link rel="stylesheet" type="text/css" href="../css/common.css"/><!--公用底部-->
-		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/header_common.css"/>
-		
+		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css"/><!--字体图标-->
+		<link rel="stylesheet" type="text/css" href="../css/header_common.css"/><!--头部公用样式-->		
 		<script src="../js/header_common.js" type="text/javascript" charset="utf-8"></script><!--共用头部js-->
-		<script src="../js/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/touch.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/list.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/list.js" type="text/javascript" charset="utf-8"></script><!--list-js-->
 		
 	</head>
 	<body>
@@ -38,13 +37,13 @@
 				</span>				
 			</header>		
 
-		<section>			
-			<article>
+		<section class="frames">			
+			<article class="content_s">
 				<!--主体内容-->
-				<nav>
+				<nav class="nav_s">
 					<!--左列表-->
 					<ul class="nav">
-						<li class="nobg"><a class="color" href="#">热门推荐</a></li>
+						<li class="my_nobg"><a class="my_color" href="#">热门推荐</a></li>
 						<li><a href="#">潮流女装</a></li>
 						<li><a href="#">品牌女装</a></li>
 						<li><a href="#">护肤化妆</a></li>
@@ -56,7 +55,7 @@
 						<li><a href="#">家用电器</a></li>
 					</ul>
 				</nav>
-				<article>
+				<article class="ajax_content">
 					<!--ajax请求数据-->
 					<h1 class="tip">热门推荐</h1>
 					<ul class="datalist">

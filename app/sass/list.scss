@@ -6,21 +6,21 @@ body,html,ul{
     margin: 0;
     padding: 0;
 }
-section{  /*头部大框架*/
-    width: 100%;
+section.frames{  /*头部大框架*/
+    width: 100vw;
     height: 1000px; 
-    article{ /*主题内容*/
+    article.content_s{ /*主题内容*/
         padding-top: 39px;
         width: 100vw;
-        height: auto;
+        height: 2000px;
         background: #f1f5f6;
         display: flex;               
-        nav{ /*左边的导航列表*/
+        nav.nav_s{ /*左边的导航列表*/
             padding-top: 10px;
             width: 20vw;
             height: 428px;
             background: #fff;
-            ul{
+            ul.nav{
                 height: 100%;
                 li{
                     width: 20vw;
@@ -31,39 +31,42 @@ section{  /*头部大框架*/
                     line-height: 42px;
                     a{
                         text-decoration: none;
-                        color: #3d3d3d;        
+                        color: #3d3d3d;   
+                        &.my_color{
+                          color: #ff0000;                             
+                        }     
                     }
                 }
             }
             
         }
-    article{  /*ajax请求数据*/
-            width: 78vw;
-            height: auto;
-            margin-left: 10px;
-            display: flex;
-            background: #fff;
-            padding-top: 10px;
-            flex-direction: column;
-            h1{  /*热门推荐标题*/
-                height: 38px;
-                line-height: 40px;
-                background:#f1f5f6 ;
-                margin: 0;
-                padding-top: 5px;
-            }
-            ul{
-                padding-top:5px ;
-                width: auto;
+        article.ajax_content{  /*ajax请求数据*/
+                width: 78vw;
                 height: auto;
+                margin-left: 10px;
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: flex-start;
-            }           
-        }
+                background: #fff;
+                padding-top: 10px;
+                flex-direction: column;
+                h1.tip{  /*热门推荐标题*/
+                    height: 38px;
+                    line-height: 40px;
+                    background:#f1f5f6 ;
+                    margin: 0;
+                    padding-top: 5px;
+                }
+                ul.datalist{
+                    padding-top:5px ;
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                }           
+            }
     }
-    footer{ /*底部列表当前高亮*/
-       .active{
+    footer.footer{ /*底部列表当前高亮*/
+       li.active{
             #homeicon3{
                 color: #8e488e;
              }
@@ -75,14 +78,14 @@ section{  /*头部大框架*/
 }
 
 /*点击左导航,出现样式*/
-.nobg{
+.my_nobg{
     background:#f1f5f6;
 }
-.color{
+.my_color{
     color: #ff0000;    
 }
 /*ajax数据加载的样式*/
-.a{
+.my_a{
     display: inline-block;
     width: 23vw;
     height: 20vh;;
@@ -92,7 +95,7 @@ section{  /*头部大框架*/
     text-decoration: none;   
     color: #3d3d3d;
 }
-.li{ 
+.my_li{ 
     width: 23vw;
     height: 20vh;;
     background: #fff;
@@ -100,12 +103,12 @@ section{  /*头部大框架*/
     flex-direction: column;                 
     flex: 1;
 }
-.img{
+.my_img{
     padding:1vw;
     width: 22vw;
     height: 18vh;
 }
-.p{
+.my_p{
    text-align: center;
    display: block;
    width: 24vw;

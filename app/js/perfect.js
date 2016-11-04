@@ -2,14 +2,14 @@
 /*完善资料js*/
 /*本地存储localStorage*/
 
-	document.addEventListener("DOMContentLoaded",function(){
+;(function(){ 
+		document.addEventListener("DOMContentLoaded",function(){
 							
 		//ajax请求数据生成地址
 		//获取三个datalist元素节点
 		var $province = $("#province");  //省
 		var $city = $("#city");  //市
 		var $county = $("#county");  //区
-
 		
 //		$.ajax({
 //			url:"../json/address.json",
@@ -34,7 +34,7 @@
 
 		//封装函数
 		//两次遍历
-		function ajax() {
+		function myajax() {
 			$.ajax({
 				url: "../json/address.json", //请求数据
 				success: function(res) {
@@ -42,18 +42,18 @@
 						if($("#list_1").val() == item.name) { //省
 							$(".city").find("option").remove();  //先移除上一个的数据存留
 						} else {
-							$("<option/>").text(item.name).appendTo($(".province")); //省
+							$("<option/>").attr("value",item.name).text(item.name).appendTo($(".province")); //省
 						}
 						$.each(item.cities, function(idx, item) {
-							$("<option/>").text(item).appendTo($(".city"));  //市
+							$("<option/>").attr("value",item).text(item).appendTo($(".city"));  //市
 						});
 					});
 				}
 			});
 		}
-		ajax();
+		myajax();
 		$("#list_1").on("change", function() { //当省输入框里面的值改变的时候
-			ajax();
+			myajax();
 		})		
 		
 		
@@ -111,4 +111,6 @@
 		})
 	
 	});
-
+	
+	
+ })();

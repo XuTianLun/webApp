@@ -5,15 +5,15 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 		<title>完善资料页</title>
-		<link rel="stylesheet" type="text/css" href="../css/perfect.css" />
+		<link rel="stylesheet" type="text/css" href="../css/perfect.css" /><!--perfect-css-->
 		<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css" /><!--字体图标-->
 		<link rel="stylesheet" type="text/css" href="../css/common.css"/><!--公用底部-->
 		<link rel="stylesheet" type="text/css" href="../css/header_common.css"/><!--公用头部-->
 		<script src="../js/zepto/dist/zepto.js"></script>
 		<script src="../js/touch.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/perfect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/perfect.js" type="text/javascript" charset="utf-8"></script><!--perfect-js-->
 		<script src="../js/header_common.js" type="text/javascript" charset="utf-8"></script><!--公用头部-->
-		<script src="../js/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
 
 	</head>
 
@@ -41,31 +41,31 @@
 			</span>				
 			</header>
 			
-		<section>
-			<article>
+		<section class="frame">
+			<article class="content">
 				<!--主体表单-->
 				<p class="user">
-					<span>昵称</span>
+					<span class="nickname">昵称</span>
 					<input type="text" id="username" maxlength="10" required="required" />
 				</p>
 				<p class="tel">
-					<span>手机号码</span>
+					<span class="phone">手机号码</span>
 					<input type="telephone" id="telephone" maxlength="11" required="required" pattern="1[3578]\d{9}" />
 				</p>
 				
 				<!--收货地址-->
 				<hgroup class="address">
-					<span>收货地址</span>
-					<p>
-						<input type="text" list="province" placeholder="选择省" id="list_1" />
+					<span class="receipt">收货地址</span>
+					<p class="select">
+						<input type="text" list="province" placeholder="选择省" id="list_1" /><!--省-->
 						<datalist id="province" class="province">
 						</datalist>
 						
-						<input type="text" list="city" placeholder="选择市" id="list_2" />
+						<input type="text" list="city" placeholder="选择市" id="list_2" /><!--市-->
 						<datalist id="city" class="city">
 						</datalist>
 
-						<input type="text" list="county" placeholder="选择区/县" id="list_3" />
+						<input type="text" list="county" placeholder="选择区/县" id="list_3" /><!--区-->
 						<datalist id="county">
 							<option value="天河" label="">天河</option>
 							<option value="白云" label="">白云</option>
@@ -74,7 +74,7 @@
 							<option value="天河" label="">天河</option>
 						</datalist>
 
-						<input type="text" placeholder="详细地址" id="txt">
+						<input type="text" placeholder="详细地址" id="txt"><!--详细地址-->
 
 					</p>
 				</hgroup>
