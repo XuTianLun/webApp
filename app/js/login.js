@@ -3,13 +3,16 @@
 		
 		var arr =[false,false];
 		//获取本地存储
-		var userData = localStorage.getItem('userData');
+		var userData = localStorage.getItem('userdata');
 		userData = userData ? JSON.parse(userData) : [];
+		console.log(userData);
 		if(userData.length>0){
-		 $('#phone').val(userData.userphone);
-		 $('#password').val(userData.password);
+			
+		 $('#phone').val(userData[0].userphone);
+		 $('#password').val(userData[0].password);
 		 arr[0] = true;
 		 arr[1] = true;
+		 console.log(arr);
 		}
 		 //验证手机号码
 		  
@@ -49,11 +52,11 @@
 				console.log(pwd);
 				var register = [];
 				var registermessage = {
-					usename:useName,
+					userphone:useName,
 					password:pwd
 				}
 				register.push(registermessage);
-				localStorage.setItem('useData',JSON.stringify(register));
+				localStorage.setItem('userdata',JSON.stringify(register));
 				
 			}else{
 				if(arr[0] == false){

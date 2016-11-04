@@ -21,3 +21,11 @@ section .password input { width: 100%; }
 section .password .prompt1 { position: absolute; display: block; right: 0; top: 15px; display: none; height: 26px; color: #F16E42; }
 
 section .btn input { width: 100%; background: #8e488e; height: 35px; font-size: 14px; color: #fff; font-weight: 600; border-radius: 5px; }
+
+.zhuce { display: flex; }
+
+.zhuce span { flex: 1; margin-left: 10px; }
+
+.zhuce span a { font-size: 1em; color: #333; }
+
+.zhuce span a:hover { text-decoration: none; }
