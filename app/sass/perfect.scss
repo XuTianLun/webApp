@@ -12,11 +12,11 @@ ul{
     margin: 0;
     padding: 0;    
 }
-section{  /*头部大框架*/
+section.frame{  /*头部大框架*/
     height: auto; 
     width: 95vw;
     overflow: hidden;
-    article{ /*内容*/
+    article.content{ /*内容*/
         padding-top: 13vh;
         width: 90vw;
         height: 400px;
@@ -30,7 +30,7 @@ section{  /*头部大框架*/
             height: 34px;
             text-align: center;
             overflow: hidden;
-            span{
+            span.nickname{
                 display: inline-block;
                 width: 20%;
                 height: 32px;
@@ -66,7 +66,7 @@ section{  /*头部大框架*/
             text-align: center;
             margin-top: 10px;
             overflow: hidden;   
-            span{
+            span.phone{
                 display: inline-block;
                 width: 20%;
                 height: 32px;
@@ -103,7 +103,7 @@ section{  /*头部大框架*/
             text-align: center;
             margin-top: 10px;
             overflow: hidden;   
-            span{
+            span.receipt{
                 display: inline-block;
                 width: 20%;
                 height: 168px;
@@ -119,7 +119,7 @@ section{  /*头部大框架*/
                 padding: 0;
                 float: left;                
             }
-            p{ /*选择框*/
+            p.select{ /*选择框*/
                 display: inline-flex;
                 flex-direction: column;
                 flex:3;
@@ -133,7 +133,7 @@ section{  /*头部大框架*/
                 margin: 0;
                 padding: 0;
                 float: left; 
-                input{
+                input#list_1,input#list_2,input#list_3,input#txt{
                     display: inline-flex;
                     flex-direction: column;
                     min-width: 62%;
@@ -169,14 +169,14 @@ section{  /*头部大框架*/
             border: none;    
             cursor: pointer;        
         }
-    footer{ /*底部列表当前高亮*/     
+    footer.footer{ /*底部列表当前高亮*/     
        .active{
             #homeicon5{
                 color: #8e488e;
-             }
-             .text{
+            }
+            .text{
                 color: #8e488e;
-             }         
+            }         
         }         
     }
 }

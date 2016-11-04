@@ -13,41 +13,42 @@ $(function() {
 		}
 
 	})
-	$doc.on('singleTap', 'section', function() {
+	$doc.on('singleTap', function() {
 		if($navlist.css('display') == 'block') {
 			$navlist.hide();
 		};
 
 	})
 
-	//swiper实现图片轮播
-	var mySwiper = new Swiper('.swiper-container', {
+	//swiper实现图片轮播；
+	var mySwiper1 = new Swiper('.swiper-container1', {
 		direction: 'horizontal',
 		pagination: '.swiper-pagination',
-
-	})
-
-	//详情与评论切换；
-	var $doc = $(document);
-	var $btn = $('#btn');
-	var $section = $('#details_content');
-	var $btn_a = $btn.find('a');
-	$btn.on('singleTap', 'a', function() {
-			$btn_a.removeClass();
-			$(this).addClass('atver');
-			var index = $(this).index();
-			$section.css('marginLeft', '-' + index * 100 + 'vw');
-			console.log($section.scrollTop());
-		})
-		$section.scroll(function(){
-			
+	})	
 	
-		});
+	
+	var mySwiper = new Swiper('.swiper-container', {
+		direction: 'horizontal',
+		autoHeight: true, //高度随内容变化
+	})
+	//详情与评论切换；
+		var $doc = $(document);
+		var $btn = $('#btn');
+		var $btn_a = $btn.find('a');
+		$btn.on('singleTap', 'a', function() {
+				$btn_a.removeClass();
+				$(this).addClass('atver');
+				var index = $(this).index();
+	
+			mySwiper.slideTo(index, 500, false);//切换到指定一个slide，速度为1秒
+				
+			})
 
-		//删除本地存储
-		//		localStorage.clear();
-		//点击加入购物车
-		//获取本地存储，防止被覆盖
+
+	//删除本地存储
+	//		localStorage.clear();
+	//点击加入购物车
+	//获取本地存储，防止被覆盖
 	var goodsData = localStorage.getItem('goodsdata'); //这里得到的有可能为null
 	goodsData = goodsData ? JSON.parse(goodsData) : [];
 	$("#goods_num").text(goodsData.length);
