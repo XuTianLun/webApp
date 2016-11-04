@@ -114,7 +114,6 @@ $(function() {
 
 			//删除元素
 			var index = $(this).parent().parent().index();
-			console.log(index);
 			$goodslist.find("li").eq(index).remove();
 			//重新设置本地存储
 			goodsData.splice(index, 1);
@@ -172,21 +171,25 @@ $(function() {
 		$buy_btn.on('touchstart',function(){
 		var check = $goodslist.find('li').find('.check');
 		//查找被选择的项
-		for(var i = 0; i < check.length; i++) {
+			//获取本地存储
+			goodsData = localStorage.getItem('goodsdata');
+			goodsData = JSON.parse(goodsData);
 
+		for(var i =check.length-1; i >-1; i--) {
 			if(check[i].checked) {
 				var img =  $(check[i]).parent('li').find('img').attr('src');
 				var name = $(check[i]).parent('li').find('.name').text();
 				var shuliang = $(check[i]).parent('li').find('.shuliang').val();
 				var price = $(check[i]).parent('li').find('.price').html();				
 				buyData.push({name:name,shuliang:shuliang,price:price,img:img});
-
+				goodsData.splice(i,1);	
+				console.log(goodsData);
 			}
-			//设置本地存储
-		localStorage.setItem('buydata', JSON.stringify(buyData));
-		
-			
-		}
 
+		}
+			//设置本地存储
+		
+		localStorage.setItem('goodsdata',JSON.stringify(goodsData));	
+		localStorage.setItem('buydata', JSON.stringify(buyData));
 		})
 });
