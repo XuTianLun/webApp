@@ -2,15 +2,15 @@ html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow-x: hidde
 
 ul, li { margin: 0; padding: 0; list-style: none; }
 
-header { display: flex; position: relative; background: #8e488e; padding: 15px 0; color: #fff; font-size: 16px; font-weight: 600; justify-content: center; align-items: center; }
+header { display: flex; position: relative; background: #8e488e; color: #fff; font-size: 1em; font-weight: 600; height: 7vh; justify-content: center; align-items: center; }
 
-header a { flex: 1; text-align: left; margin-left: 10px; text-decoration: none; }
+header a { height: 7vh; flex: 1; line-height: 7vh; text-align: left; margin-left: 10px; text-decoration: none; }
 
-header a.icon-fanhui { color: white; flex: 1; text-align: left; margin-left: 10px; font-size: 22px; }
+header a.icon-fanhui { color: white; flex: 1; text-align: left; margin-left: 10px; font-size: 1.3em; }
 
-header span:nth-child(2) { flex: 4; text-align: center; }
+header span:nth-child(2) { flex: 4; height: 7vh; line-height: 7vh; text-align: center; }
 
-header span:last-child { position: relative; flex: 1; margin-right: 10px; text-align: right; }
+header span:last-child { height: 7vh; line-height: 7vh; position: relative; flex: 1; margin-right: 10px; text-align: right; }
 
 header span:last-child .caidan { position: absolute; top: 5vh; right: 0; z-index: 10; display: none; }
 
@@ -18,7 +18,7 @@ header span:last-child .caidan ul { list-style: none; border-radius: 5px; backgr
 
 header span:last-child .caidan ul li { opacity: 0.9; }
 
-header span:last-child .caidan ul li a { display: block; font-weight: normal; text-decoration: none; font-size: 12px; text-align: center; width: 120px; padding: 10px 0; color: #fff; }
+header span:last-child .caidan ul li a { display: block; font-weight: normal; text-decoration: none; font-size: 1em; text-align: center; width: 120px; padding: 0.1em; color: #fff; }
 
 header span:last-child .caidan ul:before { content: ''; display: inline-block; position: absolute; right: 5px; top: -16px; width: 0; height: 0; border: 10px solid transparent; border-bottom: 8px solid #666; }
 
@@ -52,6 +52,6 @@ section .goods_list li p .iconfont { float: right; border: none; background: whi
 
 .footer label { float: left; width: 30vw; height: 40px; background: white; color: #333333; position: relative; text-align: center; line-height: 40px; }
 
-.footer a.pay_way { width: 35vw; background: orangered; color: white; }
+.footer a.pay_way { width: 35vw; background: deeppink; color: white; }
 
 .footer a.buy { width: 35vw; background: #8e488e; color: white; }
