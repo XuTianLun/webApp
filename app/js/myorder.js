@@ -21,11 +21,13 @@
 				
 				//删除订单
 				$btn.find('span').eq(1).singleTap(function(){
+				
 					var goodsorder = localStorage.getItem('buydata');
 					goodsorder = goodsorder ? JSON.parse(goodsorder) : [];
 					if(goodsorder.length > 0){
 						var idx = $(this).parent().parent().index();
 						$(this).parent().parent().remove();
+						console.log(idx);
 						goodsorder.splice(idx,1);
 						localStorage.setItem('buydata',JSON.stringify(goodsorder));
 					}
