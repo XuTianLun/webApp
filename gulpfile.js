@@ -57,15 +57,15 @@ gulp.task('buildjs',function(){
 	gulp.src('./app/js/*.js')
 	
 	//合并js
-//	.pipe(concat('app.js'))
-//	.pipe(gulp.dest('./app/js'))
-//	
-//	//压缩
-//	.pipe(jsmin({
-//		mangle:true
-//	}))
-//	.pipe(rename({suffix:'.min'}))
-//	.pipe(gulp.dest('./dist/js'))
+	.pipe(concat('app.js'))
+	.pipe(gulp.dest('./app/js'))
+	
+	//压缩
+	.pipe(jsmin({
+		mangle:true
+	}))
+	.pipe(rename({suffix:'.min'}))
+	.pipe(gulp.dest('./dist/js'))
 })
 
 //压缩html文件
