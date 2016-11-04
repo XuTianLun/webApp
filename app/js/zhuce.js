@@ -44,11 +44,6 @@
  					
  				})	
 	
-
-//	//获取本地存储
-	var userData = localStorage.getItem('userdata');//这里得到的有可能为null
-	userData = userData ? JSON.parse(userData) : [];
-	console.log(userData);
 	var $form = $('#register');
 	var $warning = $('#warning');
 	var flag1 = false,flag2 = false,flag3= false,flag4=false;
@@ -128,6 +123,9 @@
 	var $succeed = $('#succeed');
 	var $btn = $('#reg_btn')
 	//点击提交
+//	//获取本地存储
+	var userData = localStorage.getItem('userdata');//这里得到的有可能为null
+	userData = userData ? JSON.parse(userData) : [];	
 	$btn.on('singleTap',function(){
 		if(flag1&&flag2&&flag3&&flag4){
 			//条件满足创建本地存储
@@ -139,8 +137,9 @@
 		//注册成功页面弹出
 		$succeed.show();
 		}	
-	
+	console.log(localStorage.getItem('userdata'))
 	})
+	
 	//关闭注册成功页面
 	$('#close').on('singleTap',function(){
 		$succeed.hide();

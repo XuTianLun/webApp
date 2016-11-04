@@ -2,101 +2,25 @@
 /*列表页样式*/
 body,html,ul{
     list-style: none;
-    width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
 }
-
 section{  /*头部大框架*/
     width: 100%;
     height: 1000px; 
-    header{
-        width: 100vw;
-        height: 48px;
-        background:#8e488e;
-        color: #fff;
-        line-height: 48px;
-        position: fixed;
-        overflow: hidden;    
-        h1{           
-            display: inline-block;
-            width: 70%;
-            height: 48px;
-            line-height: 48px;
-            font-size: 17px;
-            color: #fff;
-            text-align: center;
-            margin: 0;
-            padding: 0;            
-        }
-        span.icon-fanhui{ /*返回按钮*/
-            width: 10%;
-            height: 48px;
-            display: inline-block;
-            float: left;
-            margin-left: 15px;     
-            cursor: pointer;       
-        } 
-        span.icon-liebiao{ /*列表按钮*/
-            width: auto;
-            height: auto;
-            float: right;
-            display: inline-block;           
-            margin-right: 20px;     
-            cursor: pointer;                    
-       }     
-
-    }
     article{ /*主题内容*/
         padding-top: 39px;
         width: 100vw;
         height: auto;
         background: #f1f5f6;
-        display: flex;      
-        span.headerlist{/*右侧固定菜单栏*/
-            position: absolute;
-            display: block;
-            top:47px;
-            right:10px;
-            opacity: 0;
-            background:#666;;
-            border-radius: 5px;
-            margin: 0;
-            padding: 0;
-            a{
-                display: block;
-                font-weight: normal;
-                text-decoration: none;
-                font-size: 12px;
-                text-align: center;
-                width: 120px;
-                padding: 10px 0;
-                color: #fff;
-                opacity: 0.9;
-                cursor: pointer;
-            }
-            &:before{
-                content: '';
-                display:inline-block;
-                position: absolute;
-                right: 10px;
-                top:-16px;
-                width: 0;
-                height: 0;
-                border: 10px solid transparent;
-                border-bottom:8px solid #666;
-            }            
-            
-       }  
-        
+        display: flex;               
         nav{ /*左边的导航列表*/
             padding-top: 10px;
             width: 20vw;
             height: 428px;
             background: #fff;
             ul{
-                width: 100vw;
                 height: 100%;
                 li{
                     width: 20vw;
@@ -114,7 +38,7 @@ section{  /*头部大框架*/
             
         }
     article{  /*ajax请求数据*/
-            width: 85vw;
+            width: 78vw;
             height: auto;
             margin-left: 10px;
             display: flex;
@@ -122,13 +46,11 @@ section{  /*头部大框架*/
             padding-top: 10px;
             flex-direction: column;
             h1{  /*热门推荐标题*/
-                width: 85vw;
                 height: 38px;
                 line-height: 40px;
                 background:#f1f5f6 ;
                 margin: 0;
                 padding-top: 5px;
-
             }
             ul{
                 padding-top:5px ;
@@ -137,9 +59,7 @@ section{  /*头部大框架*/
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
-
-            }
-            
+            }           
         }
     }
     footer{ /*底部列表当前高亮*/

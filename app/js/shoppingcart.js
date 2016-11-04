@@ -189,6 +189,4 @@ $(function() {
 		}
 
 		})
-		
-		console.log(localStorage.getItem('buydata'));
 });
